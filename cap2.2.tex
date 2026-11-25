@@ -259,8 +259,8 @@ La situación estándar es partir de un estadístico $\Theta_n = T(X_1, \dots, X
 \begin{teorema}[29 --- Intervalos de confianza aleatorios para el parámetro]
 Sea $\theta$ un parámetro y $\Theta_n = T(X_1, \dots, X_n)$ un estimador consistente con distribución $F_{\Theta_n}(x, \theta)$ dependiente de $\theta$. Supongamos que hemos observado los datos $X_1(\omega) \equiv x_1, \dots, X_n(\omega) \equiv x_n$. Supongamos que existe una función de pivote $g : \R \times \R \to \R$, $(x, \theta) \mapsto g(x; \theta)$, satisfaciendo:
 \begin{enumerate}
-  \item $g(\cdot; \theta)$ es una biyección (estrictamente monótona y creciente);
-  \item $g(x; \cdot)$ es estrictamente decreciente;
+  \item $g(\cdot \, ; \theta)$ es una biyección (estrictamente monótona y creciente);
+  \item $g(x ; \, \cdot)$ es estrictamente decreciente;
   \item $g(x; x) = 0$, $\forall x$;
   \item $P_n \coloneqq g(\Theta_n, \theta) \coloneqq g(T(X_1, \dots, X_n), \theta) \equiv T'(X_1, \dots, X_n, \theta)$ tiene distribución $G(x) \equiv F_{P_n}(x)$ que es independiente de $\theta$ (y de $n$).
 \end{enumerate}
