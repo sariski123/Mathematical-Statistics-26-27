@@ -1,0 +1,1051 @@
+
+
+\part*{Bloque 2: Aplicaciones a estadística matemática}
+
+\chapter{Estimadores}
+
+En lo sucesivo consideramos un espacio de probabilidad $(\Omega, \mathcal{G}, \Prob)$ asociado a cierto experimento aleatorio. Suponemos también que las v.a.s $X_1, \dots, X_n$ con $X_i : \Omega \to \R$ están idénticamente distribuidas y son independientes (i.i.d.). Si la FdD de $X_1$ es $F$ (o densidad $f$), escribiremos:
+\[
+  (X_j)_{j=1,\dots,n} \stackrel{\text{i.i.d.}}{\sim} F; \qquad (X_j)_{j=1,\dots,n} \sim X; \qquad (X_j)_{j=1,\dots,n} \sim \mathcal{N}(\mu, \sigma^2)\dots
+\]
+
+\begin{definicion}[1]
+Sea $X$ una variable aleatoria. Llamaremos \emph{muestra estadística} (\emph{random sample}) al vector aleatorio $(X_1, \dots, X_n)$ donde $X_j$ son i.i.d.\ con la distribución de $X \equiv X_1$; $n$ es el tamaño muestral y $X \equiv X_1$ la variable madre.
+\end{definicion}
+
+Se suelen añadir las condiciones de que $\mu \coloneqq \E X_1$ y $\sigma^2 \coloneqq \Var X_1$ sean finitos.
+
+Si $f(x)$ es la función de densidad (o de masa) de $X$, entonces la función de densidad conjunta de la muestra $(X_1, \dots, X_n)$ es
+\[
+  f_{(X_1, \dots, X_n)}(x_1, x_2, \dots, x_n) = f(x_1) \cdot f(x_2) \cdots f(x_n).
+\]
+En el caso discreto, la función de masa conjunta del vector $(X_1, \dots, X_n)$ es
+\[
+  f_{(X_1, \dots, X_n)}(x_1, x_2, \dots, x_n) \equiv \Prob(X_1 = x_1, \dots, X_n = x_n) = \Prob(X = x_1) \cdots \Prob(X = x_n) = p_1 \cdots p_n.
+\]
+
+\begin{observacion}[1]
+Una muestra estadística Normal es un vector aleatorio $(X_1, \dots, X_n)$ donde $(X_j)_{j=1,\dots,n} \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(\mu, \sigma^2)$ con densidad normal multivariante incorrelada (comparar con el caso general $f \sim e^{-q(x)}$):
+\[
+  f(x_1, \dots, x_n; \mu, \sigma) = (2\pi\sigma^2)^{-\frac{n}{2}} e^{-\left((x_1-\mu)^2 + \dots + (x_n-\mu)^2\right)/(2\sigma^2)}, \quad (x_1, \dots, x_n) \in \R^n.
+\]
+\end{observacion}
+
+\begin{definicion}[2]
+Decimos que se han realizado $n$ pruebas si se han realizado \emph{$n$ repeticiones independientes} del e.a.\ relativo a $X \equiv X_1$. Representan $n$ observaciones de un mismo observable $X$, digamos altura, peso o nivel de colesterol en una población.
+\end{definicion}
+
+\begin{observacion}[2]
+Probabilísticamente no hay diferencia entre la distribución y propiedades de $X(\omega_1), \dots, X(\omega_n)$ y la del v.a.\ $(X_1(\omega), \dots, X_n(\omega))$ siempre que $(X_j)_{j=1,\dots,n} \stackrel{\text{i.i.d.}}{\sim} X$. Es decir, matemáticamente son indistinguibles $n$ repeticiones independientes del e.a.\ relativo a $X \equiv X_1$ y una única repetición para el vector $\vec{X}$.
+
+Llamaremos \emph{observación}, \underline{valores observados o datos} al vector $\vec{X}(\omega) \equiv (X_1(\omega), \dots, X_n(\omega)) = (x_1, \dots, x_n) \in \R^n$.
+\end{observacion}
+
+\begin{observacion}[3]
+Muy importante notar la diferencia entre los distintos significados de $X_k, x_k$:
+\begin{enumerate}
+  \item $X_1, \dots, X_n$: componentes del vector aleatorio $(X_1, \dots, X_n)$.
+  \item $x_1, \dots, x_n$: como argumentos de la función de densidad $f(x_1, \dots, x_n; \mu)$.
+  \item $x_1 \equiv X_1(\omega), \dots, x_n \equiv X_n(\omega)$: datos estadísticos observados al realizar un e.a.
+\end{enumerate}
+\end{observacion}
+
+\begin{definicion}[3]
+Un \underline{estadístico o estimador} es toda v.a.\ $\Theta_n \coloneqq T(X_1, \dots, X_n)$ siendo $T : \R^n \to \R$ una función y $X_1, \dots, X_n$ una muestra aleatoria. Tiene por tanto su propia distribución $\Prob_{\Theta_n}$ con su media y varianza.
+\end{definicion}
+
+\section{Estimación puntual}
+
+Supongamos/admitimos que cierto observable $X$ tiene distribución $\Prob_X$ conocida y que depende de un parámetro $\theta \in E \subset \R$. \emph{Suponemos $\Prob_X$ conocida pero $\theta \in E \subset \R$ desconocido.} Queremos hacer inferencias sobre $\theta$ a partir de las observaciones $x_1, \dots, x_n$. Para ello:
+
+\begin{definicion}[4 — \underline{Problema y metodología de la estimación puntual}] \, 
+\begin{enumerate}
+  \item Construir una muestra $(X_1, \dots, X_n) \stackrel{\text{i.i.d.}}{\sim} \Prob_X$.
+  \item Construir un estimador $\Theta_n \equiv \hat{\theta}_n \coloneqq T(X_1, \dots, X_n)$ que simule $\theta$.
+  \item Calcular su distribución $\Prob_{\Theta_n}(\theta)$ y propiedades.
+  \item Si al realizar el e.a.\ obtenemos unos valores observados $x_1 \equiv X(\omega_1), \dots, x_n \equiv X(\omega_n)$ y una estimación, o valor observado del estadístico,
+        \[
+          \Theta_n(\omega) = T(X_1(\omega), \dots, X_n(\omega)) = T(x_1, \dots, x_n),
+        \]
+        ¿cómo estimar el parámetro $\theta$?
+  \item Obtener intervalos de confianza donde estará el parámetro $\theta$.
+  \item Realizar test de hipótesis sobre el valor del parámetro $\theta$.
+\end{enumerate}
+\end{definicion}
+
+Si $\Prob_X$ depende del parámetro $\theta$, también lo hace $\Prob_{\Theta_n}$. Si $h(x; n; \theta)$ es la densidad (si existe) de $\Theta_n$:
+\[
+  \Prob_{\Theta_n}(B) = \int_B h(x; n; \theta)\,dx.
+\]
+Obviamente, los $n$ datos $x_1, \dots, x_n$ contienen más información que $T(x_1, \dots, x_n)$. La pregunta es cuándo contienen igual información.
+
+\begin{definicion}[5]
+Dado el estimador $\Theta_n \coloneqq T(X_1, \dots, X_n)$ llamaremos:
+\begin{enumerate}
+  \item \underline{Media y varianza} de $\Theta_n$: $\mu_n(\theta) \coloneqq \E\Theta_n$ y $\sigma_n^2(\theta) \coloneqq \Var\Theta_n$.
+  \item \underline{Sesgo}: $\overline{B}_n \coloneqq \E B_n \coloneqq \E(\Theta_n - \theta) = \mu_n - \theta$, $\forall n$, donde $B_n \coloneqq \Theta_n - \theta$.
+  \item \underline{Error en media cuadrática} $\operatorname{ECM}$ y error estándar $\sqrt{\operatorname{ECM}}$:
+        \[
+          \operatorname{ECM} = \E(\Theta_n - \theta)^2 \equiv \E B_n^2.
+        \]
+\end{enumerate}
+\end{definicion}
+
+\begin{proposicion}[1]
+El $\operatorname{ECM}$ verifica:
+\[
+  \E(\Theta_n - \theta)^2 = \Var\Theta_n + \overline{B}_n^2.
+\]
+\end{proposicion}
+
+\begin{proof}[Demostración]
+Es obvio que $\Var B_n = \Var\Theta_n$, que equivale al enunciado. Otra demo directa fue vista en la lección 1, Prop.\ 22:
+\textcolor{blue}{\begin{align*}
+  \Var\Theta_n &= \E(\Theta_n - \theta + \theta - \mu_n)^2 = \E(\Theta_n - \theta)^2 + \E(\theta - \mu_n)^2 + 2\E(\Theta_n - \theta)\E(\theta - \mu_n) \\
+               &= \E(\Theta_n - \theta)^2 - (\theta - \mu_n)^2.
+\end{align*}}
+\end{proof}
+\begin{definicion}[6 — Propiedades de estimadores]
+En las condiciones anteriores decimos que $\Theta_n \coloneqq T(X_1, \dots, X_n)$:
+\begin{enumerate}
+  \item Simula $\theta$ si es \emph{asintóticamente insesgado}: $\lim_{n\to\infty} \overline{B}_n = 0$. Alternativamente, $\E\Theta_n \xrightarrow{n\to\infty} \theta$.
+  \item \emph{Insesgado} si el sesgo es nulo: $\overline{B}_n \coloneqq \mu_n - \theta = 0$, $\forall n$.
+  \item \emph{Asintóticamente nula varianza}: $\lim_{n\to\infty} \sigma_n^2 = 0$.
+  \item \emph{Asintóticamente nulo $\operatorname{ECM}$}: $\lim_{n\to\infty} \E(\Theta_n - \theta)^2 = 0$. Alternativamente, $\Theta_n \xrightarrow[n\to\infty]{L_2} \theta$.
+  \item \emph{Consistencia}: $\Theta_n$ es consistente si converge (en algún modo) a $\theta$: $\Theta_n \xrightarrow{\Prob} \theta$. Lo normal es usar convergencia en probabilidad y en media cuadrática. Lo óptimo sería c.s.
+  \item \emph{Simetría}: $T(X_1, \dots, X_n)$ es función simétrica: para toda permutación cualquiera de las coordenadas $\vec{X}^\sigma \equiv (X_{\sigma_1}, \dots, X_{\sigma_n})$ es
+        \[
+          T(X_1, \dots, X_n) = T(X_{\sigma_1}, \dots, X_{\sigma_n}).
+        \]
+        Refleja indiferencia ante el orden en que aparecen los datos.
+  \item \emph{Suficiencia}: $\Theta \coloneqq T(X_1, \dots, X_n)$ es suficiente para estimar el parámetro $\theta$ si la información útil contenida en el vector de datos original equivale a la del estadístico.
+  \item \emph{Eficiencia}: Un estimador $\Theta_n$ es eficiente si alcanza el límite inferior de Cramér-Rao, lo que significa que tiene la varianza más baja posible.
+\end{enumerate}
+\end{definicion}
+\textcolor{blue}{
+\noindent \textbf{Simetría bajo un grupo de transformaciones:} Si $g : \R^n \to \R^n$ denota la acción de un grupo de transformaciones en $\R^n$, entonces puede cumplirse que
+\[
+  T(X_1, \dots, X_n) = T(g \cdot (X_1, \dots, X_n)).
+\]
+En este caso, $T$ es una función del invariante maximal del grupo (definido en $\R^m$, $m < n$):
+\[
+  T(X_1, \dots, X_n) = \tilde{T}(\Phi(x_1, \dots, x_n)).
+\]
+\begin{ejemplo}[1 — Acción diagonal del grupo de Lie de traslaciones]
+$G \coloneqq \{g_k\}_{k \in \R}$, $g_k : \R^n \to \R^n \mid g_k(x_1, \dots, x_n) = (x_1 + k, \dots, x_n + k)$. El grupo es transitivo con invariante maximal $\Phi(x_1, \dots, x_n) = (x_1 - x_n, \dots, x_{n-1} - x_n) \in \R^{n-1}$.
+\end{ejemplo}}
+
+\begin{observacion}[4]
+Si $\Theta_n$ tiene densidad $h(x; n; \theta)$, la condición de no sesgo es
+\[
+  \int_{-\infty}^\infty x\,h(x; n; \theta)\,dx = \theta, \quad \forall n.
+\]
+\end{observacion}
+
+\begin{observacion}[5]
+Si un estimador $\Theta_n \coloneqq T(X_1, \dots, X_n)$ es consistente c.s., entonces
+\[
+  \lim_{n\to\infty} T(X_1(\omega), \dots, X_n(\omega)) \equiv \lim_{n\to\infty} T(x_1, \dots, x_n) = \theta
+\]
+coincide con el valor real del parámetro para cualquier realización $X_1(\omega), \dots, X_n(\omega)$ (c.s.).
+\end{observacion}
+
+\begin{proposicion}[2]
+Supongamos que $(\Theta_n)_{n=1}^\infty$ satisface P1 y P3 (o, en particular, P2 y P3). Entonces $(\Theta_n)_{n=1}^\infty$ es consistente en media cuadrática y en probabilidad.
+\end{proposicion}
+\textcolor{blue}{\begin{proof}[Demostración]
+Prop. 22 de la Lección 1: $\text{P1} + \text{P3} \Rightarrow \text{P4} \Rightarrow$ convergencia en media cuadrática y, por desigualdad de Chebyshev, en probabilidad.
+\end{proof}}
+
+\begin{definicion}[7]
+Supongamos que $\Theta_1, \Theta_2$ son estimadores sin sesgo del parámetro $\theta$. Diremos que $\Theta_1$ es \emph{más eficiente} que $\Theta_2$ si $\Var\Theta_1 < \Var\Theta_2$.
+\end{definicion}
+
+\begin{definicion}[8]
+Dada una muestra aleatoria $X_1, \dots, X_n$ se llama \emph{media muestral} al estadístico
+\[
+  \overline{X}_n \equiv M_n \coloneqq \frac{X_1 + \dots + X_n}{n}.
+\]
+Se llama \emph{quasi-varianza muestral} al estadístico
+\[
+  S_n^2 \coloneqq \frac{1}{n-1}\sum_{i=1}^n (X_i - \overline{X}_n)^2.
+\]
+\end{definicion}
+
+\begin{proposicion}[3 — Propiedades de $\overline{X}$] \, 
+\begin{enumerate}
+  \item Es estimador insesgado de la esperanza matemática: $\E\overline{X}_n = \E X_1 \equiv \mu$.
+  \item Asintóticamente nula varianza: $\Var\overline{X}_n = \sigma^2/n \equiv (1/n)\Var X_1 \xrightarrow{n\to\infty} 0$.
+  \item Es consistente en ley, probabilidad, media cuadrática y c.s.\ hacia $\mu$:
+        \[
+          \overline{X}_n \xrightarrow[n\to\infty]{D} \mu; \qquad \overline{X}_n \xrightarrow[n\to\infty]{\Prob} \mu; \qquad \overline{X}_n \xrightarrow[n\to\infty]{L_2} \mu; \qquad \overline{X}_n \xrightarrow[n\to\infty]{\text{c.s.}} \mu.
+        \]
+  \item Si $X_1 \sim F$ tiene densidad $f$, entonces $\overline{X}_n$ tiene densidad $h_{\overline{X}} : \R \to \R$:
+        \[
+          h_{\overline{X}}(x) = n(f * f * \dots * f)(nx) \stackrel{\text{def}}{=} n f^{*n}(nx).
+        \]
+  \item Si $X_1 \sim F$ es reproductiva con densidad $f_\theta$, entonces $\overline{X}_n$ tiene densidad $h_{\overline{X}}(x) : \R \to \R$:
+        \[
+          h_{\overline{X}}(x) = n f_{X_1}(nx; \mu'; \sigma'),
+        \]
+        donde $\mu', \sigma'$ son los nuevos parámetros reproductivos.
+\end{enumerate}
+\end{proposicion}
+\begin{proof}[Demostración]
+1--4 ya está todo visto en las Lecciones 1 y 2; ver LFGN y Prop.\ 37 de L1. Además, por la Lección 2, la densidad de $Z \coloneqq X_1 + \dots + X_n$ es la convolución múltiple
+\[
+  f_Z(x) = (f_{X_1}^{*})^n(x) \implies f_{\overline{X}_n}(x) = n f_Z(nx) = n(f_{X_1}^{*})^n(nx).
+\]
+\end{proof}
+\begin{observacion}[6]
+No confundir la media de la distribución $\mu \coloneqq \E X_1$ con la media muestral $\overline{X}_n$, ni la varianza de la distribución $\sigma^2 \coloneqq \Var X_1$ con la varianza de la media muestral $\sigma^2/n$, ni con la quasi-varianza muestral $S_n^2$.
+\end{observacion}
+\textcolor{blue}{
+\begin{proposicion}[4 — Consistencia de la quasi-varianza muestral]
+Sea $X_1, \dots, X_n$ una muestra aleatoria con $\sigma^2 \coloneqq \Var X_1 < \infty$ y $4$ momentos $\alpha_j = \E X_1^j < \infty$, $j = 1, 2, 3, 4$. Entonces:
+\begin{enumerate}
+  \item Es estimador insesgado de la varianza:
+        \[
+          \E S_n^2 = \sigma^2 \equiv \Var X_1.
+        \]
+  \item Consistencia: $S_n^2 \xrightarrow[n\to\infty]{\Prob} \sigma^2$.
+\end{enumerate}
+\end{proposicion}
+\begin{proof}
+\textbf{Insesgado:} Usando que $n\overline{X}_n = \sum_{i=1}^n \overline{X}_n$ y $\sum_i X_i = n\overline{X}_n$, un cálculo fácil muestra que:
+\begin{align*}
+  \sum_{i=1}^n (X_i - \overline{X}_n)^2 &= \sum_{i=1}^n (X_i^2 + \overline{X}_n^2 - 2X_i\overline{X}_n) = \sum_{i=1}^n X_i^2 + n\overline{X}_n^2 - 2\overline{X}_n\sum_{i=1}^n X_i \\
+                                       &= \sum_{i=1}^n X_i^2 + n\overline{X}_n^2 - 2n\overline{X}_n^2 = \sum_{i=1}^n X_i^2 - n\overline{X}_n^2 = \sum_{i=1}^n (X_i^2 - \overline{X}_n^2)
+\end{align*}
+\[
+  \implies S_n^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i^2 - \overline{X}_n^2)
+\]
+\begin{align*}
+  \implies \E S_n^2 &= \frac{1}{n-1}\sum_{i=1}^n (\E X_i^2 - \E\overline{X}_n^2) = \frac{1}{n-1}\sum_{i=1}^n (\E X_1^2 - \E\overline{X}_n^2) \\
+                    &= \frac{n}{n-1}(\E X_1^2 - \E\overline{X}_n^2) = \frac{n}{n-1}\bigl(\mu^2 + \sigma^2 - (\Var\overline{X}_n + (\E\overline{X}_n)^2)\bigr) \\
+                    &= \frac{n}{n-1}\left(\mu^2 + \sigma^2 - \left(\frac{\sigma^2}{n} + \mu^2\right)\right) = \frac{n-1}{n-1}\sigma^2 = \sigma^2,
+\end{align*}
+i.e.\ es estimador insesgado de $\sigma^2$. La consistencia se sigue de la Prop.\ 2 estableciendo que
+\[
+  \Var(S_n^2) = \frac{\alpha_4}{n} - \frac{\sigma^4(n-3)}{n(n-1)} \xrightarrow{n\to\infty} 0.
+\]
+\end{proof}
+\begin{teorema}[1 — de Fisher]
+Sea $X_1, \dots, X_n$ una muestra aleatoria $(X_i)_{i=1}^n \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(\mu, \sigma^2)$. Entonces:
+\begin{enumerate}
+  \item $\overline{X}_n \sim \mathcal{N}\left(\mu, \nicefrac{\sigma^2}{n}\right)$ tiene densidad
+        \[
+          h_{\overline{X}}(x) = (2\pi\sigma^2/n)^{-\frac{1}{2}} e^{-n(x-\mu)^2/(2\sigma^2)} \sim \mathcal{N}\left(\mu, \nicefrac{\sigma^2}{n}\right).
+        \]
+  \item $\overline{X}_n, S_n^2$ son estimadores insesgados de la media y varianza (de la v.a.\ madre $X$):
+        \[
+          \E\overline{X}_n = \mu \equiv \E X; \qquad \E S_n^2 = \sigma^2 = \Var X.
+        \]
+  \item Son v.a.s independientes: $\overline{X}_n \indep S_n^2$. Además:
+        \[
+          \overline{X}_n \sim \mathcal{N}(\mu, \sigma^2/n) \indep \frac{n-1}{\sigma^2}S_n^2 \sim \chi_{n-1}^2 \implies h_{S_n^2}(x) = \lambda f_{\chi_{n-1}^2}(\lambda x), \quad \lambda \coloneqq \frac{n-1}{\sigma^2}.
+        \]
+\end{enumerate}
+\end{teorema}}
+\begin{proof}[Demostración]\textcolor{red}{
+En el caso de normales usar la Prop.\ 3 (alternativamente Prob.\ 6 de L1 y Prob.\ 3 de L2) para obtener que $\overline{X}_n \sim \mathcal{N}(\mu, \sigma^2/n)$. Además $\overline{X}_n, S_n^2$ son estimadores insesgados de la media y varianza (prop.\ anterior). Lo que queda es más difícil. \\
+Dado que $X_i \sim \mathcal{N}(\mu, \sigma^2)$ y son i.i.d., $N_i \coloneqq (X_i - \mu)/\sigma \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0,1) \Rightarrow$
+\begin{enumerate}[label=(\roman*)]
+  \item $f_{\vec{N}}(x_1, \dots, x_n) = (2\pi)^{-\frac{n}{2}} e^{-(x_1^2 + \dots + x_n^2)/2}$;
+  \item $\sum_{i=1}^n N_i^2 \sim \chi_n^2$;
+  \item $N_1 \indep \sum_{i=2}^n N_i^2 \sim \chi_{n-1}^2$.
+\end{enumerate}
+Supongamos que $\vec{Y}$ está relacionado con $\vec{N}$ por una transformación ortogonal $A$ donde $A_{1j} = 1/\sqrt{n}$. Entonces:
+\[
+  Y_i = \sum_j A_{ij} N_j; \qquad \sum_{i=1}^n N_i^2 = \sum_{i=1}^n Y_i^2,
+\]
+\[
+  Y_1 = \sum_j A_{1j} N_j = \frac{1}{\sqrt{n}}\sum_j N_j = \sqrt{n}\,\overline{N},
+\]
+\[
+  \sum_{i=2}^n Y_i^2 = \sum_{i=1}^n Y_i^2 - Y_1^2 = \sum_{i=1}^n N_i^2 - n\overline{N}^2 = \sum_{i=1}^n (N_i - \overline{N})^2.
+\]
+Por la invariancia ortogonal de la normal estándar, $\vec{Y}$ es de v.a.\ independientes $Y_k \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0,1)$, luego $Y_1 \indep \sum_{i=2}^n Y_i^2$. Las relaciones
+\[
+  Y_1 = \sqrt{n}\,\overline{N}, \qquad \sum_{i=2}^n Y_i^2 = \sum_{i=1}^n (N_i - \overline{N})^2
+\]
+implican que $\overline{N} \indep \sum_{i=1}^n (N_i - \overline{N})^2$. Además:
+\[
+  \sum_{i=1}^n (N_i - \overline{N})^2 = \sum_{i=2}^n Y_i^2 \sim \chi_{n-1}^2,
+\]
+\[
+  \overline{N} \coloneqq \frac{N_1 + \dots + N_n}{n} = \frac{1}{n}\sum_{i=1}^n \frac{X_i - \mu}{\sigma} = \frac{1}{n\sigma}\sum_{i=1}^n X_i - \frac{1}{n\sigma}\sum_{i=1}^n \mu = \frac{\overline{X} - \mu}{\sigma} \sim \mathcal{N}(0, 1/n).
+\]
+Adicionalmente,
+\[
+  \sum_{i=1}^n (N_i - \overline{N})^2 = \sum_{i=1}^n \left(\frac{X_i - \mu}{\sigma} - \frac{\overline{X} - \mu}{\sigma}\right)^2 = \frac{1}{\sigma^2}\sum_{i=1}^n (X_i - \overline{X})^2.
+\]
+En términos de $X$ queda:
+\[
+  \frac{1}{\sigma^2}\sum_{i=1}^n (X_i - \overline{X})^2 \sim \chi_{n-1}^2 \indep \overline{X}.
+\]}
+\end{proof}
+
+\section{Estadística descriptiva}
+
+La ED trabaja con observaciones $x_1, \dots, x_n \in \R^n$ que se identifican con los valores observados de una muestra aleatoria $X_1, \dots, X_n$: $x_j = X_j(\omega)$.
+
+Si se supone que las observaciones corresponden a resultados de una v.a.\ $X$ con media y varianza (teóricas) $\mu \coloneqq \E X$, $\sigma^2 \coloneqq \Var X$, entonces
+\[
+  \overline{X}(\omega) \approx \frac{x_1 + \dots + x_n}{n} \quad \text{estima } \mu; \qquad S^2(\omega) \approx \frac{1}{n-1}\sum_{i=1}^n (x_i - \overline{X})^2 \quad \text{estima } \sigma^2
+\]
+son estimaciones de la media y varianza $\mu, \sigma^2$ de la población.
+
+La \underline{desviación típica muestral} es $S(\omega) = \left(\frac{1}{n-1}\sum_{i=1}^n (x_i - \overline{X})^2\right)^{\nicefrac{1}{2}}$.
+
+\begin{observacion}[7]
+No confundir la media de la distribución $\mu \coloneqq \E X_1$ con la media muestral $\overline{X}$, ni la varianza de la distribución $\sigma^2 \coloneqq \Var X_1$ con la varianza de la media muestral $\sigma^2/n$, ni con la quasi-varianza muestral $S_n^2 \coloneqq \frac{1}{n-1}\sum_{i=1}^n (X_i - \overline{X})^2$.
+\end{observacion}
+% =========================================================================
+% PROBLEMAS: 1.2.1. Estadística descriptiva y 1.2.2. Estimadores
+% =========================================================================
+
+\section{Problemas de estadística descriptiva}
+
+\begin{enumerate}
+  \item Sea $X$ la altura de un individuo elegido al azar de una población. Para estimar la media y la varianza, observamos una muestra aleatoria $x_1, \dots, x_7$ y obtenemos los siguientes valores (en centímetros):
+  \[
+    166{,}8, \quad 171{,}4, \quad 169{,}1, \quad 178{,}5, \quad 168{,}0, \quad 157{,}9, \quad 170{,}1
+  \]
+ 
+  Hallar los valores de la media, la varianza y la desviación típica de la muestra observada.
+
+  \smallskip
+  \noindent\textit{Solución:} La media muestral para la muestra observada es $\overline{x} \equiv \overline{X}(\omega) = 168{,}8$. La varianza de la muestra es $\frac{1}{7}\sum (x_k - 168{,}8)^2 = 37{,}7$ y la DTP es $\sqrt{37{,}7} = 6{,}1$.
+
+  \item Una muestra para la vida de bombillas en días ha dado como resultados:
+  \[
+    x_1 = 983, \quad x_2 = 1040, \quad x_3 = 1063, \quad x_4 = 1103, \quad x_5 = 1241
+  \]
+ 
+  Hallar los valores de la media muestral, la varianza muestral y la desviación típica muestral para la muestra observada.
+
+  \smallskip
+  \noindent\textit{Solución:} Aquí $n = 5$. La media y varianza muestrales son:
+  \[
+    \overline{x} \equiv \overline{X}(\omega) = 1086; \qquad X_1^2 + \dots + X_5^2 = 5{,}93
+  \]
+ 
+  \[
+    S^2(\omega) \approx \frac{1}{n-1}\sum_{i=1}^n (x_i - \overline{X})^2 = \frac{1}{4}\sum_i (x_i - 1086)^2 = 9392 \implies \sigma_5 = 96{,}9
+  \]
+ 
+  Por tanto $\mu \coloneqq \E X_1 \approx 5{,}93$ y $\sigma \coloneqq (\Var X)^{\nicefrac{1}{2}} \approx 96{,}9$. Finalmente, $\sqrt{\operatorname{ECM}_{S_5}} = \frac{\sigma_5}{\sqrt{5}} = 43{,}3$.
+
+  \item Sea $T$ el tiempo necesario para completar una tarea específica en una fábrica. Observamos una muestra aleatoria $X_1, \dots, X_6$. Obtenemos los siguientes valores (en minutos): $18$, $21$, $17$, $16$, $24$, $20$. Hallar los valores de la media muestral, la varianza muestral y la desviación típica muestral para la muestra observada.
+
+  \smallskip
+  \noindent\textit{Solución:} $\overline{X} = 19{,}33$; varianza muestral $8{,}67$ y desviación típica muestral $= 2{,}94$.
+
+  \item Supongamos que tenemos las siguientes $10$ observaciones ordenadas por tamaño:
+  \[
+    0{,}94, \quad 1{,}56, \quad 2{,}52, \quad 3{,}54, \quad 3{,}91, \quad 4{,}16, \quad 4{,}49, \quad 6{,}50, \quad 7{,}42, \quad 8{,}69
+  \]
+ 
+  Calcular el valor observado y el error medio de los estadísticos $\hat{\theta} = 2\overline{X}$ y $\Theta = \frac{n+1}{n}X_{(n)}$.
+
+  \smallskip
+  \noindent\textit{Solución:}
+  \[
+    \hat{\theta}(\omega) = 2\overline{X}(\omega) = \frac{2(x_1 + \dots + x_n)}{n} = 8{,}8; \qquad \Theta(\omega) = X_{(n)}(\omega)\frac{n+1}{n} = \frac{11}{10}\times 8{,}69 = 9{,}6
+  \]
+ 
+  Sus varianzas son (ver P6, P7, P8):
+  \[
+    \Var\hat{\theta} = \frac{\theta^2}{3n}; \qquad \Var\Theta = \frac{\theta^2}{n(n+2)}
+  \]
+ 
+  Los errores típicos son sus raíces cuadradas:
+  \[
+    \sigma_{\hat{\theta}}(\omega) = \frac{\hat{\theta}(\omega)}{\sqrt{3n}} = \frac{8{,}8}{\sqrt{30}} = 2{,}6; \qquad \sigma_{\Theta}(\omega) = \frac{\Theta(\omega)}{\sqrt{n(n+2)}} = \frac{9{,}6}{\sqrt{120}} = 0{,}7
+  \]
+ 
+\end{enumerate}
+
+\section{Problemas de estimadores}
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item En una piscifactoría de salmón se utilizan dos tipos diferentes de dietas. Supongamos que a un grupo de peces se le da la dieta A y al otro la dieta B. Supongamos que $X =$ ``pesos de salmón que sigue dieta A'' $\sim \mathcal{N}(20, 5)$; $Y =$ ``pesos de salmón que sigue dieta B'' $\sim \mathcal{N}(18, 4)$ (kilogramos). ¿Cuál es la probabilidad de que la dieta A produzca más peso que la B? Para comprobar si hay una diferencia de peso, se pesan $n$ salmones de cada grupo y se calcula el peso medio de cada grupo. ¿Cómo de grande debe ser $n$ para que estemos seguros c.p.\ $0{,}99$ de que la dieta A produce en promedio salmones de más peso que la B?
+
+  \smallskip
+  \noindent\textit{Solución:}
+  \[
+    X \sim \mathcal{N}(20, 5); \quad Y \sim \mathcal{N}(18, 4) \implies X - Y \sim \mathcal{N}(\mu_X - \mu_Y, \sigma_X^2 + \sigma_Y^2) = \mathcal{N}(2, 9)\]
+    \[ \implies \Prob(X - Y \geq 0) = \Prob\left(\mathcal{N}(0,1) \geq -\frac{2}{\sqrt{9}}\right) = 0{,}75
+  \]
+  \[
+    \overline{X} \sim \mathcal{N}(20, 5/n), \quad \overline{Y} \sim \mathcal{N}(18, 4/n) \implies \overline{X} - \overline{Y} \sim \mathcal{N}(\mu_X - \mu_Y, \sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2) = \mathcal{N}(2, 9/n)
+  \]
+  \[
+    0{,}99 = \Prob(\overline{X} - \overline{Y} \geq 0) = \Phi\left(\frac{2\sqrt{n}}{3}\right) \implies n \geq 13
+  \]
+  La probabilidad de que un salmón con la dieta A produzca más peso que uno de la B es $0{,}75$. La probabilidad de que el peso promedio de un lote de $n \geq 13$ salmones sea mayor para los de la dieta A que para los de la B es $0{,}99$.
+
+  \item Supongamos que $X \sim U(0, \theta)$ donde $\theta$ es desconocida. Demostrar que $\Theta_n = 2\overline{X}_n$ es un estimador sin sesgo y consistente de $\theta$.
+
+  \smallskip
+  \noindent\textit{Solución:}
+  \[
+    f_X(x) = \frac{1}{\theta}\chi_{(0,\theta)}(x) \implies \E X = \frac{1}{\theta}\int_0^\theta x\,dx = \frac{\theta}{2}
+  \]
+ 
+  \[
+    \E X^2 = \frac{1}{\theta}\int_0^\theta x^2\,dx = \frac{\theta^2}{3}; \qquad \Var X = \frac{\theta^2}{12}
+  \]
+  
+  \[
+    \E\Theta_n = 2\E\frac{X_1 + \dots + X_n}{n} = \frac{2n}{n}\E X_1 = \theta
+  \]
+ 
+  \[
+    \Var\Theta_n = \Var\left(2\frac{X_1 + \dots + X_n}{n}\right) = \frac{4}{n^2}(\Var X_1 + \dots + \Var X_n) = \frac{4n}{n^2}\Var X_1 = \frac{\theta^2}{3n} \xrightarrow{n\to\infty} 0
+  \]
+ 
+  Por la Proposición 2, $(\Theta_n)_{n=1}^\infty$ es consistente en media cuadrática y en probabilidad.
+
+  \item Supongamos que $X \sim U(0, \theta)$. Demostrar que $X_{(n)} \coloneqq \max\{X_1, \dots, X_n\}$ es un estimador con sesgo de $\theta$.
+
+  \smallskip
+  \noindent\textit{Solución:} Necesitamos la distribución del estadístico de orden $X_{\max} \equiv X_{(n)}$. Por independencia, dado $x \in [0, \theta]$ es:
+  \[
+    \Prob(X_{\max} \leq x) = \Prob(\max\{X_1, \dots, X_n\} \leq x) = \] 
+    \[ =  \Prob(X_1 \leq x, \dots, X_n \leq x)  = \Prob(X_1 \leq x)\cdots\Prob(X_n \leq x) = \left(\frac{x}{\theta}\right)^n
+  \]
+ 
+  Luego su densidad es:
+  \[
+    f_{X_{(n)}}(x) = n\frac{x^{n-1}}{\theta^n}, \qquad x \in [0, \theta]
+  \]
+   \[
+    \E X_{(n)} = \int_0^\theta x\,n\frac{x^{n-1}}{\theta^n}\,dx = \left[\frac{n}{(n+1)\theta^n}x^{n+1}\right]_0^\theta = \frac{n}{n+1}\theta < \theta
+  \]
+   \[
+    \lim_{n\to\infty} \E X_{(n)} = \lim_{n\to\infty} \frac{n}{n+1}\theta = \theta
+  \]
+   Es decir, el estimador es sesgado y asintóticamente insesgado. Sin embargo:
+  \[
+    \E X_{(n)}^2 = \int_0^\theta x^2\,n\frac{x^{n-1}}{\theta^n}\,dx = \frac{n}{n+2}\theta^2
+  \]
+  \[
+    \Var X_{(n)} = \frac{n}{n+2}\theta^2 - \left(\frac{n}{n+1}\theta\right)^2 = \frac{n\theta^2}{(n+2)(n+1)^2} \xrightarrow{n\to\infty} 0
+  \]
+ 
+  Por la Proposición 2, $(\Theta_n)_{n=1}^\infty$ es consistente en media cuadrática y en probabilidad.
+
+  \smallskip
+  \noindent\textit{Nota:} La varianza del MLE para $U(0, \theta)$ decrece al ritmo $\mathcal{O}(\frac{1}{n^2})$, mucho más rápido que el ritmo habitual $\mathcal{O}(\frac{1}{n})$ de los estimadores regulares. La cota de Cramér-Rao requiere que el soporte de la distribución sea independiente del parámetro para intercambiar derivación e integración, condición que no se cumple aquí cuando el soporte depende de $\theta$.
+
+  \item Supongamos que $X \sim U(0, \theta)$ donde $\theta$ es desconocida. Dados los estimadores $\Theta_n^{(1)} = 2\overline{X}_n$, $\Theta_n^{(2)} \equiv X_{(n)} \coloneqq \max\{X_1, \dots, X_n\}$ y $\Theta_n^{(3)} \coloneqq \frac{n+1}{n}X_{(n)}$, decidir cuáles son insesgados y cuál tiene menos varianza. ¿Cuál de todos es óptimo?
+
+  \item Sea $n$ par. Demostrar que ambos estimadores son insesgados de $\mu = \E X_1$, pero el primero es más eficiente que el segundo (los impares se cuentan dos veces, los pares no son tenidos en cuenta):
+  \[
+    \Theta_n^{(1)} = \overline{X}_n \coloneqq \frac{X_1 + X_2 + X_3 + \dots + X_n}{n}, \qquad \Theta_n^{(2)} = 2\frac{X_1 + X_3 + X_5 + \dots + X_{n-1}}{n}
+  \]
+ 
+  \smallskip
+  \noindent\textit{Solución:} Las propiedades de la media y varianza nos dan, obviamente, $\E\Theta_n^{(1)} = \mu$. Además:
+  \[
+    \E\Theta_n^{(2)} = \frac{2}{n}(\E X_1 + \E X_3 + \E X_5 + \dots) = \frac{2}{n}\cdot\frac{n}{2}\E X_1 = \mu
+  \]
+  
+  \[
+    \Var\Theta_n^{(2)} = \frac{4}{n^2}(\Var X_1 + \Var X_3 + \Var X_5 + \dots) = \frac{4}{n^2}\cdot\frac{n}{2}\Var X_1 = \frac{2\sigma^2}{n} > \Var\Theta_n^{(1)} \equiv \frac{\sigma^2}{n}
+  \]
+ 
+  y, por tanto, el primero es más eficiente que el segundo. Esto refleja que solo $T^{(1)}(x_1, \dots, x_n) = (x_1 + \dots + x_n)/n$ es una función simétrica de la muestra $\vec{x} \coloneqq (x_1, \dots, x_n)$, mientras que $T^{(2)}$ no lo es (al permutar $x_1$ y $x_2$). Al eliminar y repetir observaciones aumenta la varianza.
+
+  \item Demostrar que la cuasi-varianza es un estimador insesgado.
+
+  \item Demostrar que para toda distribución la media geométrica es un estimador sesgado de su media.
+
+  \smallskip
+  \noindent\textit{Solución:} Debido a la suposición i.i.d., tenemos:
+  \[
+    \E\left[\left(\prod_{i=1}^n X_i\right)^{1/n}\right] = \E\left(X_1^{1/n}\cdots X_n^{1/n}\right) = \E(X_1^{1/n})\cdots\E(X_n^{1/n}) = \left(\E X^{1/n}\right)^n \]
+    \[ \equiv g(\E(X^{1/n})) \leq \E(g(X^{1/n})) \equiv \E\left((X^{1/n})^n\right) \equiv \E X
+  \]
+ 
+  por la desigualdad de Jensen aplicada a la función de potencia $g(x) = x^n$ estrictamente convexa (para $x \geq 0$, $n \geq 2$). Además $\operatorname{GM} \xrightarrow{\Prob} e^{\E\log X}$.
+
+  \item Demostrar que la mediana muestral de una distribución simétrica es un estimador insesgado de su media.
+\end{enumerate}
+
+
+
+
+\chapter{El método de la máxima verosimilitud}
+Supongamos que cierto observable $X$ tiene distribución $\Prob_X$ conocida y que depende de un parámetro $\theta \in E \subset \R$. Sea $f(x|\theta)$ la función de densidad (o de masa) de $X$. El método de la máxima verosimilitud es un procedimiento natural que permite obtener la mejor estimación del parámetro $\theta$ de una distribución de probabilidad, cuando conocemos $n$ observaciones, en condiciones de independencia. La idea es maximizar la verosimilitud de las observaciones.
+
+Supongamos que hemos observado los resultados de $n$ pruebas $X_1(\omega) = x_1, \dots, X_n(\omega) = x_n$ y sea $A$ el suceso evidencia:
+\[
+  A = \{X_1 = x_1, \dots, X_n = x_n\}, \qquad x_1, \dots, x_n \in \R.
+\]
+Si ha ocurrido el suceso $A$, parece lógico aceptar que el parámetro $\theta$ es tal que su valor real maximiza la probabilidad de ocurrencia de $A$, dada por la función de verosimilitud $\Prob(A|\theta)$. Por tanto, el método se basa en:
+\begin{enumerate}
+  \item Definamos la función de verosimilitud (\emph{likelihood}) $\theta \mapsto \ell(\theta)$ como
+  \[
+    \ell(\theta) \equiv f(x_1, x_2, \dots, x_n|\theta) = f(x_1|\theta) \cdot f(x_2|\theta) \cdots f(x_n|\theta) \approx \Prob(A|\theta)
+  \]
+  donde $f(x_1, x_2, \dots, x_n|\theta)$ es la función de densidad (o de masa) conjunta del vector $(X_1, \dots, X_n)$ correspondiente a todas las observaciones.
+
+  En la práctica se suele utilizar el logaritmo de esta función:
+  \[
+    \hat{\ell}(x_1, x_2, \dots, x_n|\theta) \equiv \hat{\ell}(\theta) = \ln \ell = \sum_{i=1}^n \ln f(x_i|\theta).
+  \]
+
+  \item Supongamos que $l(\theta)$ tiene máximo único:
+  \[
+    \theta_*(x_1, \dots, x_n) = \arg\max \ell(\theta) \equiv \arg\max_\theta f(x_1, \dots, x_n|\theta).
+  \]
+
+  \item El estimador máximo verosímil (MLE) de $\theta$ es aquel que maximiza la verosimilitud de las observaciones:
+  \[
+    \Theta_{\text{MLE}} \coloneqq \theta_*(X_1, \dots, X_n) \equiv \theta_{\text{MLE}}.
+  \]
+\end{enumerate}
+
+El razonamiento se basa en que ``los valores de $\theta$ que asignan una probabilidad alta al valor observado $(x_1, \dots, x_n)$ son más verosímiles'' que aquellos valores que asignan una probabilidad pequeña. El valor más verosímil es aquel que maximiza la función de verosimilitud.
+
+\begin{proposicion}[1 --- Invariancia]
+Supongamos que la función de verosimilitud alcanza un máximo único en un punto crítico:
+\[
+  \frac{d}{d\theta} \ell(\theta) = 0 \iff \theta = \theta_*(x_1, \dots, x_n) \implies \Theta_{\text{MLE}, \theta} = \theta_*(X_1, \dots, X_n).
+\]
+Sea $G : \R \to \R$ una aplicación inyectiva (estrictamente monótona creciente) en su rango, de clase $\mathcal{C}^1$ y sea $v \coloneqq G(\theta)$. Entonces el estimador máximo verosímil de $v$ es
+\[
+  \Theta_{\text{MLE}, v} = G\bigl(\theta_*(X_1, \dots, X_n)\bigr) \equiv G(\Theta_{\text{MLE}, \theta}).
+\]
+\end{proposicion}
+
+\begin{proof}[Demostración]
+La función de verosimilitud en términos del parámetro $v$ es
+\[
+  \ell(\theta) = \ell(h(v)) \coloneqq \hat{\ell}(v),
+\]
+donde usamos que $v \coloneqq G(\theta) \iff \theta = h(v)$ pues $G$ es biyección y tiene inversa $h \coloneqq G^{-1}$. El MLE para $v$ se sigue de obtener el máximo de $\hat{\ell}(v)$, que satisface (recordar $G'(\theta) > 0$):
+\[
+  0 = \frac{d\hat{\ell}(v)}{dv} = \frac{dl(h(v))}{dv} = \left.\frac{dl(\theta)}{d\theta}\right|_{\theta = h(v)} \frac{d\theta}{dv} \iff 0 = \left.\frac{dl(\theta)}{d\theta}\right|_{\theta = h(v)} \iff \]
+  \[ \theta \equiv h(v) = \theta_*(x_1, \dots, x_n) \iff v_* = G(\theta_*).
+\]
+\end{proof}
+
+\begin{proposicion}[2]
+Supongamos que se cumplen las condiciones de regularidad de Cramér-Rao, y que existe un estimador eficiente y que existe el estimador máximo verosímil. Entonces ambos coinciden.
+\end{proposicion}
+\textcolor{red}{
+\begin{proposicion}[3]
+Sea $X$ una v.a.\ que depende de un parámetro $\theta$ con media finita para todo $\theta$: $\E X \coloneqq m(\theta) < \infty$. Si $m : \R \to \R$ es biyectiva, y si $l(\theta)$ alcanza máximo único en un punto crítico, entonces el MLE de $\theta$ es $\Theta_n = m^{-1}(\overline{X}_n)$.
+\end{proposicion}
+\begin{proof}[Demostración]
+$\mu = m(\theta) \iff \theta = m^{-1}(\mu)$. El resultado se sigue por: (i) $m$ es biyectiva y tiene inversa; (ii) la proposición anterior, pues el MLE de $\mu$ es $\overline{X}_n$.
+\end{proof}
+\begin{proposicion}[4]
+El estimador máximo verosímil es simétrico y asintóticamente sin sesgo eficiente:
+\[
+  \lim_{n\to\infty} \E\bigl(\hat{\theta}_n(X_1, \dots, X_n)\bigr) = \theta.
+\]
+$\ell(X_1, \dots, X_n; \theta)$ es función simétrica de sus argumentos; por tanto su máximo también.
+\end{proposicion}
+\begin{teorema}[1]
+Supongamos que la función $l(X_1, \dots, X_n; \theta) \equiv g(\theta)$ satisface: tiene un máximo global único, $g \in \mathcal{C}^0$ es continua, y dominancia: existe $h(x_1, \dots, x_n)$ integrable de modo que $\log \ell(X_1, \dots, X_n; \theta) \le h(x_1, \dots, x_n)$. Entonces:
+\begin{enumerate}
+  \item \textbf{Consistencia:}
+  \[
+    \sup_{\theta \in \Theta} \bigl|\ell(X_1, \dots, X_n; \hat{\theta}_{\text{MLE}}) - \ell(X_1, \dots, X_n; \theta)\bigr| \xrightarrow{\Prob} 0,
+  \]
+  y por tanto, invirtiendo, $\hat{\theta}_{\text{MLE}} \xrightarrow{\Prob} \theta$.
+  \item \textbf{Asintótica normalidad:}
+  \[
+    \sqrt{n}\,(\hat{\theta}_{\text{MLE}} - \theta_0) \xrightarrow{D} \mathcal{N}(0, I^{-1}).
+  \]
+\end{enumerate}
+\end{teorema}}
+
+\section{Información de Fisher}
+
+Supongamos que cierto observable $X$ tiene distribución $\Prob_X$ conocida y que depende de un parámetro $\theta \in E \subset \R$. Sea $f(x;\theta)$ la función de densidad (o de masa) de $X$.
+
+\begin{definicion}[1]
+La \underline{información de Fisher} $I(\theta) \ge 0$ es
+\[
+  I(\theta) \coloneqq \E\left(\frac{\partial}{\partial\theta} \log f(X;\theta)\right)^2 = \int_{-\infty}^{\infty} f(x;\theta)\left(\frac{\partial}{\partial\theta} \log f(x;\theta)\right)^2 dx.
+\]
+\end{definicion}
+
+\noindent $\star$ $I(\theta)$ mide la cantidad de información que el observable $X$, con densidad $f(x;\theta)$, tiene sobre el parámetro $\theta$. Cuanto más plana es esta función, menos información tiene $X$ sobre $\theta$.
+
+\begin{teorema}[2 --- \underline{Cota de Cramér-Rao}]
+Supongamos que $\Theta_n \coloneqq T(X_1, \dots, X_n)$ es estimador sin sesgo del parámetro $\theta$, que $X_1$ tiene densidad $f(x;\theta)$ y que se verifican determinadas condiciones de regularidad. Entonces
+\[
+  \Var\Theta_n \ge \frac{1}{n I(\theta)} = \mathcal{O}\left(\frac{1}{n}\right).
+\]
+Los estimadores que saturan la cota se dicen \underline{óptimos} o de \underline{eficiencia máxima}.
+\end{teorema}
+
+\begin{proposicion}[5]
+\[
+  I(\theta) = -\E\frac{\partial^2}{\partial\theta^2}\log f(X;\theta).
+\]
+\end{proposicion}
+
+\begin{proposicion}[6]
+La variable
+\[
+  Z \coloneqq \frac{\partial}{\partial\theta}\log f(X;\theta)
+\]
+satisface
+\[
+  \E Z = 0 \quad \text{y} \quad \Var Z = \E\left(\frac{\partial}{\partial\theta}\log f(X;\theta)\right)^2,
+\]
+y más generalmente
+\[
+  \E\frac{\partial_\theta^k f(X;\theta)}{f(X;\theta)} = \int_{-\infty}^{\infty} f(x;\theta)\frac{\partial_\theta^k f(x;\theta)}{f(x;\theta)}\,dx = 0.
+\]
+\end{proposicion}
+
+\begin{proof}[Demostración]
+En efecto:
+\begin{align*}
+    \E\frac{\partial}{\partial\theta}\log f(X;\theta) & = \int_{-\infty}^{\infty} f(x;\theta)\frac{\partial}{\partial\theta}\log f(x;\theta)\,dx = \int_{-\infty}^{\infty} f(x;\theta)\frac{\partial_\theta f(x;\theta)}{f(x;\theta)}\,dx \\ & = \int_{-\infty}^{\infty} \partial_\theta f(x;\theta)\,dx = \partial_\theta \int_{-\infty}^{\infty} f(x;\theta)\,dx = \partial_\theta 1 = 0.
+\end{align*}
+Por otra parte:
+\[
+  \frac{\partial^2}{\partial\theta^2}\log f(X;\theta) = \frac{\frac{\partial^2}{\partial\theta^2} f(X;\theta)}{f(X;\theta)} - \left(\frac{\frac{\partial}{\partial\theta} f(X;\theta)}{f(X;\theta)}\right)^2 = \frac{\frac{\partial}{\partial\theta}f(X;\theta)}{f(X;\theta)} - \left(\frac{\partial}{\partial\theta}\log f(X;\theta)\right)^2.
+\]
+La esperanza del primer término es nula y la del segundo es la información de Fisher $I(\theta)$.
+\end{proof}
+
+\section{Estadísticos suficientes}
+
+En lo sucesivo $\Theta \coloneqq T(X_1, \dots, X_n)$ es un estimador sobre el parámetro $\theta$.
+
+\begin{definicion}[2]
+Sea $\vec{x}$ una muestra. Definimos la \underline{información $I_{T(\vec{x})}$ del estimador} (sobre el parámetro) asociada a la muestra como
+\[
+  I_{T(\vec{x})} : \theta \approx T(\vec{x}).
+\]
+La información que contiene la muestra sobre el parámetro $\theta$ es $I_{\vec{x}}$, que hay que discernir en cada caso.
+\end{definicion}
+
+\noindent $\star$ Este concepto de información está asociado a un estimador y una muestra, y no guarda relación con otros como la información de Fisher, o la información asociada a dependencia/independencia.
+
+\begin{definicion}[3]
+Introducimos en $\R^n$ la relación de equivalencia
+\[
+  \vec{x}' \sim \vec{x} \iff T(\vec{x}') = T(\vec{x}).
+\]
+Para cada valor $t \in \R$ consideremos la variedad $(n-1)$-dimensional
+\[
+  C_t \coloneqq \{(x_1, \dots, x_n) \mid T(x_1, \dots, x_n) = t\} \subset \R^n.
+\]
+\end{definicion}
+
+\begin{observacion}[1]
+\begin{enumerate}
+  \item Para datos en distintas clases de equivalencia $\vec{x} \in C_t$, $\vec{y} \in C_{t'}$, $t \neq t'$, el estimador dará necesariamente información distinta:
+  \[
+    I_{T(\vec{x})} : \theta \approx t; \qquad I_{T(\vec{y})} : \theta \approx t'.
+  \]
+  \item La información del estimador sobre el parámetro es la misma en cada clase de equivalencia: dados dos conjuntos de datos $\vec{x} \sim \vec{y} \in C_t$, se tiene
+  \[
+    I_{T(\vec{x})} = I_{T(\vec{y})} : \theta \approx t \ (= T(\vec{x}) = T(\vec{y})).
+  \]
+  \item Dados dos conjuntos de datos $\vec{x} \sim \vec{y} \in C_t$, no necesariamente proporcionan la misma información sobre $\theta$: puede ocurrir que $I_{\vec{x}} \neq I_{\vec{y}}$.
+  \item En general, $I_{\vec{x}} \neq I_{T(\vec{x})}$.
+\end{enumerate}
+\end{observacion}
+
+\begin{definicion}[4]
+Un estadístico $\Theta \coloneqq T(X_1, \dots, X_n)$ es \emph{suficiente} para estimar el parámetro $\theta$ si para cada $n$, y cada conjunto de datos $\vec{x} \coloneqq (x_1, \dots, x_n)$, se tiene que $T(\vec{x})$ y $\vec{x}$ contienen la misma información sobre $\theta$: $I_{T(\vec{x})} = I_{\vec{x}}$. En particular, para un estadístico suficiente y datos $\vec{x} \sim \vec{y} \in C_t$ se tendrá
+\[
+  I_{T(\vec{x})} = I_{\vec{x}} = I_{T(\vec{y})} = I_{\vec{y}}.
+\]
+\end{definicion}
+
+\begin{ejemplo}
+Sea $\Theta = 2\frac{X_1 + \dots + X_n}{n}$. Aquí $C_t$ es el plano
+\[
+  C_t \coloneqq \left\{(x_1, \dots, x_n) \,\middle|\, x_1 + \dots + x_n = \frac{nt}{2}\right\} \subset \R^n.
+\]
+Sea $n = 3$ y supongamos que tenemos tres muestras:
+\[
+  \vec{x} = (3, 3, 3), \qquad \vec{y} = (1, 8, 0), \qquad \vec{z} = (2, 4, 2).
+\]
+$T(\vec{x}) = T(\vec{y}) = 6 \neq T(\vec{z}) = 16/3$ y $\vec{x} \sim \vec{y} \in C_6$, $\vec{x} \not\sim \vec{z}$. Sea $X \sim U[0, \theta]$: sabemos que $\Theta$ es un estimador sin sesgo del parámetro $\theta$; veamos que sin embargo no es suficiente. En efecto, la información de $T$ sobre el parámetro es para las dos primeras muestras:
+\[
+  I_{T(\vec{x})} = I_{T(\vec{y})} : \text{``}\theta \approx T(\vec{x}) = 6\text{''}.
+\]
+Sin embargo, las muestras conservan información adicional sobre el parámetro. En efecto, $I_{\vec{x}}$ nos dice al menos que $x_1, \dots, x_n \in [0, \theta] \iff \theta \ge x_1, \dots, x_n \implies I_{\vec{x}} : \theta \ge 3$; pero $I_{\vec{y}} : \theta \ge 8$, que podríamos ordenar (de peor a mejor) como $I_{\vec{x}} < I_{T(\vec{x})} = I_{T(\vec{y})} < I_{\vec{y}}$. Es decir, $\vec{y}$ contiene más información útil que $T(\vec{y})$.
+
+Para discriminar si todos los $\vec{x} \in C_t$ proporcionan la misma información sobre $\theta$ necesitamos además la distribución de probabilidad de $\vec{X}$ dentro de $C_t$. Esta viene dada por
+\[
+  f_{\vec{X}}|_{C_t} \equiv f_{\vec{X} \mid T(X_1, \dots, X_n) = t}(\vec{x}) \stackrel{\text{notac.}}{\equiv} f_{\vec{X} \mid \Theta = t}(\vec{x}|t).
+\]
+\end{ejemplo}
+
+\begin{observacion}[2]
+Tenemos entonces las siguientes densidades de interés:
+\begin{enumerate}
+  \item Densidad conjunta en $\R^n$ (o función de verosimilitud):
+  \[
+    f_{\vec{X}} : \R^n \to \R, \qquad f_{\vec{X}}(x_1, x_2, \dots, x_n; \theta) = f(x_1;\theta)\cdots f(x_n;\theta).
+  \]
+  \item La densidad de $\Theta = T(X_1, \dots, X_n)$:
+  \[
+    f_{\Theta} : \R \to \R, \qquad y \mapsto f_{\Theta}(y;\theta).
+  \]
+  \item Densidad condicional de $\vec{X}$ dada $T(\vec{X})=t$ (densidad conjunta restringida a $C_t \subset \R^n$):
+  \[
+    f_{\vec{X} \mid T(\vec{X}) = t} : \R^n \to \R, \quad \text{con soporte } C_t.
+  \]
+\end{enumerate}
+\end{observacion}
+
+\begin{observacion}[3 --- Geometría]
+Por definición:
+\begin{enumerate}
+  \item $T(\vec{x})$ es una función constante sobre las clases de equivalencia $C_t$: $T(\vec{x})|_{C_t} = t$, $\forall \vec{x} \in C_t$.
+  \item $T(\vec{x})$ es una función independiente de $\theta$.
+  \item $f_{\vec{X}}(\vec{x};\theta)$ depende en $\theta$. Además no es constante sobre $C_t$: $f_{\vec{X}}(\vec{x};\theta)|_{C_t} \neq f_{\vec{X}}(\vec{y};\theta)|_{C_t}$, $\forall \vec{x}, \vec{y} \in C_t$.
+\end{enumerate}
+\end{observacion}
+
+\begin{definicion}[5]
+Un estadístico $\Theta \coloneqq T(X_1, \dots, X_n)$ es \emph{suficiente} para estimar el parámetro $\theta$ si para cada $n$, la distribución condicional $f_{\vec{X} \mid T(X_1, \dots, X_n) = t}(x_2, \dots, x_n; t; \theta)$ no depende de $\theta$.
+\end{definicion}
+
+\begin{proposicion}[7]
+Con carácter general sea $q(t, x_2, \dots, x_n)$ la función inversa en $x_1$ de la ecuación $T(x_1, \dots, x_n) = t$, i.e.,
+\[
+  T(x_1, \dots, x_n) = t \iff x_1 = q(t, x_2, \dots, x_n),
+\]
+y sea $\vec{x}_t \coloneqq (q(t, x_2, \dots, x_n), x_2, \dots, x_n) \in \R^n$ (de donde $T(\vec{x}_t) = t$, $\forall t$). Entonces:
+\begin{enumerate}
+  \item $\vec{X}$ tiene densidad $n$-dimensional
+  \[
+    f_{\vec{X}}(\vec{x};\theta) = f_X(x_1;\theta)\cdots f_X(x_n;\theta)
+  \]
+  que depende en $x_1, x_2, \dots, x_n$ y paramétricamente en $\theta$ ($n+1$ variables).
+  \item $\vec{X} \mid T(X_1, \dots, X_n) = t$ tiene densidad concentrada en la variedad $(n-1)$-dimensional $C_t$, y dada por
+  \[
+    f_{\vec{X} \mid T(X_1, \dots, X_n) = t}(x_2, \dots, x_n; t; \theta) = \frac{A(\vec{x}; t; \theta)}{B(t;\theta)},
+  \]
+  donde
+  \[
+    A \equiv f_{\vec{X}}(\vec{x}_t;\theta)\left|\frac{\partial q}{\partial t}(t, x_2, \dots, x_n)\right|; \qquad B(t;\theta) = \int dx_2 \cdots \int dx_n \, A(\vec{x}; t; \theta) \equiv f_{\Theta}(t;\theta),
+  \]
+  que depende en $x_2, \dots, x_n$ y paramétricamente en $t$ y en $\theta$ ($n+1$ variables). Alternativamente:
+  \[
+    f_{\vec{X} \mid \Theta = t}(x_2, \dots, x_n; t; \theta) = \frac{f_{\vec{X}}(\vec{x}_t;\theta)}{f_{\Theta}(t;\theta)}\left|\frac{\partial q}{\partial t}(t, x_2, \dots, x_n)\right|.
+  \]
+\end{enumerate}
+\end{proposicion}
+
+\begin{teorema}[3 --- \underline{Criterio de Factorización de Fisher-Neyman}]
+Supongamos que $\Theta \coloneqq T(X_1, \dots, X_n)$ es estimador suficiente de $\theta$ siendo $T : \R^n \to \R$. Las siguientes condiciones son equivalentes:
+\begin{enumerate}
+  \item La distribución condicional $f_{\vec{X} \mid T(X_1, \dots, X_n) = t}(x_2, \dots, x_n; t; \theta)$ no depende de $\theta$.
+  \item La densidad conjunta en $\R^n$, $f_{\vec{X}}(\vec{x};\theta)$, factoriza como
+  \[\boxed{
+    f_{\vec{X}}(\vec{x};\theta) = g(T(\vec{x});\theta)\,h(\vec{x})}
+  \]
+  para ciertas funciones $h : \R^n \to \R^+$, independiente de $\theta$, y $g : \R^2 \to \R^+$, $(y,\theta) \mapsto g(y;\theta)$.
+\end{enumerate}
+Nótese que la función $\tilde g: \R^n \to \R^+$, $\vec{x} \mapsto g(T(\vec{x});\theta)$, es constante en $C_t$. Luego $f_{\vec{X}}(\vec{x};\theta)$ factoriza como el producto de una función constante en $C_t$ y otra independiente de $\theta$.
+\end{teorema}
+
+\begin{proof}[Demostración]
+($\text{C2} \Rightarrow \text{C1}$) Supongamos que C2 se cumple. Entonces:
+\begin{enumerate}
+    \item 
+\[
+  f_{\vec{X} \mid T(X_1, \dots, X_n) = t}(x_2, \dots, x_n; t; \theta) = \frac{f_{\vec{X}}(\vec{x}_t;\theta)}{f_{\Theta}(t;\theta)}\left|\frac{\partial q(t, x_2, \dots, x_n)}{\partial t}\right|,
+\]
+luego no depende de $\theta$ si $\frac{f_{\vec{X}}(\vec{x}_t;\theta)}{f_{\Theta}(t;\theta)}$ no lo hace.
+\item Dado que 
+$$T(x_1, \dots, x_n) = t \iff x_1 = q(t, x_2, \dots, x_n)  \text{ y }  \vec{x}_t \coloneqq (q(t, x_2, \dots, x_n), x_2, \dots, x_n) \in \R^n$$
+se sigue que $T(\vec{x}_t) = t$. 
+\item Puesto que se cumple la factorización, bajo el cambio $\vec{x} \to \vec{x}_t$:
+\[
+  g(T(\vec{x}_t);\theta) = g(t;\theta); \qquad f_{\vec{X}}(\vec{x}_t;\theta) = g(T(\vec{x}_t);\theta)\,h(\vec{x}_t) = g(t;\theta)\,h(\vec{x}_t),
+\]
+\begin{align*}    
+  f_{\Theta}(t;\theta) & = \int dx_2 \cdots \int dx_n \, f_{\vec{X}}(\vec{x}_t;\theta)\frac{\partial q(\vec{x}_t)}{\partial t} \\ & = g(t;\theta) \int dx_2 \cdots \int dx_n \, h(\vec{x}_t)\frac{\partial q(\vec{x}_t)}{\partial t} \equiv g(t;\theta)\,I(t).
+\end{align*}
+Por tanto:
+\[
+  \frac{f_{\vec{X}}(\vec{x}_t;\theta)}{f_{\Theta}(t;\theta)} = \frac{g(t;\theta)\,h(\vec{x}_t)}{g(t;\theta)\,I(t)} = \frac{h(\vec{x}_t)}{I(t)},
+\]
+que no depende de $\theta$; luego $f_{\vec{X} \mid \Theta = t}(x_2, \dots, x_n; t; \theta)$ tampoco.
+\end{enumerate}
+\end{proof}
+
+\begin{teorema}[4 --- \underline{Criterio de Factorización de Fisher-Neyman, Recíproco}]
+Si $f_{\vec{X}}(\vec{x};\theta)$ cumple la factorización para alguna $h : \R^n \to \R^+$, independiente de $\theta$, y algunas 
+$$g : \R^2 \to \R^+, \quad (y,\theta) \mapsto g(y;\theta), \quad \text{y} \quad  T : \R^n \to \R$$
+Entonces para cualquier $S$ estimador suficiente de $\theta$ se tiene que $S = G(T(\vec{X}))$ para alguna $G : \R \to \R$.
+\end{teorema}
+
+\section{Funciones de estimadores}
+
+Si $S(\vec{X})$ es estimador de $\theta$, y $G : \R \to \R$, ¿qué estima $G(S(\vec{X}))$?
+
+\begin{teorema}[5]
+Sea $S(\vec{X})$ un estimador suficiente del parámetro $\theta$ y $G : \R \to \R$ una función inyectiva. Entonces $T \coloneqq G(S(\vec{X}))$ es un estimador suficiente del parámetro $G(\theta)$.
+\end{teorema}
+
+\begin{proof}[Demostración]
+Al ser $G$ una función inyectiva (biyectiva en su imagen), $S$ y $T$ contienen la misma información. Alternativamente, $S = \theta \iff G(S) = G(\theta)$. Luego, por propiedades de la densidad condicionada:
+\[
+  f_{\vec{X} \mid T(\vec{X}) = G(\theta)}(\vec{x}|\theta) = f_{\vec{X} \mid S(\vec{X}) = \theta}(\vec{x}|\theta) = f_{\vec{X} \mid S(\vec{X}) = \theta}(\vec{x}),
+\]
+que no depende del parámetro (pues $S(\vec{X})$ es estimador suficiente de $\theta$), luego $f_{\vec{X} \mid T(\vec{X}) = G(\theta)}(\vec{x}|\theta)$ tampoco; luego $T$ es estimador suficiente.
+\end{proof}
+
+\noindent $\star$ Supongamos que tenemos dos estimadores para un mismo parámetro $\theta$: uno, el obtenido por el método de máxima verosimilitud; otro, un estadístico suficiente. ¿Cómo se relacionan?
+
+\begin{proposicion}[8]
+Supongamos que:
+\begin{enumerate}
+  \item Solo existe una estimación de máxima verosimilitud de $\theta$: $\Theta_{\text{ML}}$ es única.
+  \item Existe un estimador suficiente para $\theta$: $S \coloneqq T(X_1, \dots, X_n)$, siendo $T : \R^n \to \R$.
+\end{enumerate}
+Entonces $\Theta_{\text{MLE}} = S$.
+\end{proposicion}
+
+\begin{proof}[Demostración]
+Si $\Theta \coloneqq T(X_1, \dots, X_n)$ es suficiente entonces la función de verosimilitud satisface $\theta \mapsto g(T(\vec{x});\theta)\,h(\vec{x}) \equiv f_{\vec{X}}(\vec{x};\theta)$ y el máximo se alcanza donde se alcance el de $g(T(\vec{x});\theta)$; sea $G(z) = \arg\max_\theta g(z;\theta)$. Por tanto, $\arg\max_\theta g(T(\vec{x});\theta) = G(z)$ donde $z \coloneqq T(\vec{x})$ y alguna $G : \R \to \R$:
+\[
+  \Theta_{\text{MLE}} = \arg\max_\theta f_{\vec{X}}(\vec{x};\theta) = G(T(\vec{X})) \equiv G(S).
+\]
+Como $S$ es estimador para $\theta$, por el principio de invarianza $G(S)$ lo sería de $G(\theta)$. Pero hemos supuesto que $\Theta_{\text{MLE}}$ es el MLE de $\theta$, luego $G(x) = x$.
+\end{proof}
+\textcolor{blue}{
+\begin{proposicion}[9]
+Aquí evaluamos las anteriores en el caso $n = 2$. Sea $T : \R^2 \to \R$ tal que la función restricción $x_1 \mapsto T(x_1, x_2)$ satisface para cada $x_2 \in S_{X_2}$:
+\begin{enumerate}
+  \item $T(\cdot, x_2)$ es monótona creciente y admite inversa única $q(\cdot, x_2)$: $T(x_1, x_2) = z \iff x_1 = q(z; x_2)$.
+  \item Es de clase $\mathcal{C}^1$.
+\end{enumerate}
+Entonces:
+\begin{enumerate}
+  \item $\vec{X} \coloneqq (X_1, X_2)$ tiene densidad $f_{\vec{X}}(x_1, x_2) = f_X(x_1) f_X(x_2)$.
+  \item $\vec{Y} \coloneqq (T(X_1, X_2), X_2)$ tiene densidad
+  \[
+    f_{\vec{Y}}(t, x_2) = f_{\vec{X}}(q(t, x_2), x_2)\left|\frac{\partial q(t, x_2)}{\partial t}\right|.
+  \]
+  \item $\Theta \equiv T(X_1, X_2)$ tiene densidad
+  \[
+    f_{\Theta}(t) = \int_{-\infty}^{\infty} f_{\vec{X}}(q(t, x_2), x_2)\left|\frac{\partial q(t, x_2)}{\partial t}\right| dx_2.
+  \]
+  \item $X_2 \mid T(X_1, X_2) = t$ tiene densidad
+  \[
+    f_{X_2 \mid T(X_1, X_2) = t}(x_2) = \frac{f_{\vec{Y}}(t, x_2)}{f_{\Theta}(t)}.
+  \]
+\end{enumerate}
+\end{proposicion}
+\begin{proof}[Demostración]
+El punto 2 se obtiene mediante la transformación $\Psi : \R^2 \to \R^2$, $\vec{y} = \Psi(\vec{x})$, $y_1 = T(x_1, x_2)$, $y_2 = x_2$, con inversa 
+$$\vec{x} = \Psi^{-1}(\vec{y}) = (q(y_1, y_2), y_2) \equiv (x_1, x_2)$$
+Sabemos que
+\[
+  F_{\vec{Y}}(\vec{y}) \equiv \Prob(\vec{Y} \le \vec{y}) = F_{\vec{X}}(\Psi^{-1}(\vec{y})) \equiv F_{\vec{X}}(x_1, x_2)
+  = \int_{-\infty}^{x_1} \int_{-\infty}^{x_2} f_{\vec{X}}(z_1, z_2)\,dz_1\,dz_2; \quad x_1 \equiv q(y_1, y_2)
+\]
+Por tanto
+\[
+  f_{\vec{Y}}(\vec{y}) = \frac{\partial^2}{\partial y_1 \partial y_2} F_{\vec{Y}}(\vec{y})
+  = \frac{\partial^2}{\partial y_1 \partial y_2} \int_{-\infty}^{y_2} \int_{-\infty}^{x_1} f_{\vec{X}}(z_1, z_2)\,dz_1\,dz_2
+\]
+\[
+  \frac{\partial}{\partial y_1} \int_{-\infty}^{x_1} f_{\vec{X}}(z_1, y_2)\,dz_1
+  = \frac{\partial x_1}{\partial y_1} \frac{\partial}{\partial x_1} \int_{-\infty}^{x_1} f_{\vec{X}}(z_1, y_2)\,dz_1
+  = f_{\vec{X}}(x_1, x_2) \frac{\partial}{\partial y_1} q(y_1, y_2)
+\]
+\[
+  \Rightarrow f_{\vec{Y}}(\vec{y}) = f_{\vec{X}}(y_1, x_2) \frac{\partial}{\partial y_2} q(y_1, y_2)
+\]
+Punto 3 es calcular la marginal a partir de la conjunta, lección 2
+\[
+  f_{\Theta}(t) = \int_{-\infty}^{\infty} dx_2\, f_{\vec{Y}}(t, x_2)
+\]
+Finalmente el Punto 4 es la definición de densidad condicionada que se calcula como una probabilidad condicionada: conjunta/marginal.
+\end{proof}}
+
+\begin{observacion}[4]
+Sabemos que $f_{\vec{X}}(\vec{x};\theta)$ depende en $\theta$. Además no es constante sobre $C_t$: 
+$$\frac{f_{\vec{X}}(\vec{x};\theta)}{f_{\vec{X}}(\vec{y};\theta)} \neq 1, \quad \forall \vec{x}, \vec{y} \in C_t$$
+\end{observacion}
+
+\begin{definicion}[6]
+Un estadístico $\Theta \coloneqq T(X_1, \dots, X_n)$ es \underline{minimal suficiente} para estimar el parámetro $\theta$ si para cada $n$, es suficiente y además 
+$$\frac{f_{\vec{X}}(\vec{x};\theta)}{f_{\vec{X}}(\vec{y};\theta)}$$
+no depende (s\'i depende) de $\theta$ si y solo si $\vec{x} \sim \vec{y}$ (o no).
+\end{definicion}
+
+\begin{corolario}
+$\Theta \coloneqq T(X_1, \dots, X_n)$ es \underline{minimal suficiente} para $\theta$ si la función $g : \R^2 \to \R^+$ en la descomposición de Fisher-Neyman satisface: $\frac{g(z_1;\theta)}{g(z_2;\theta)}$ es independiente de $\theta \iff z_1 = z_2$.
+\end{corolario}
+
+\begin{ejemplo}
+Para una población $\operatorname{Poisson}(\lambda)$, el estimador $T(X_1, \dots, X_n) = \frac{1}{n}(X_1 + \dots + X_n)$ es minimal suficiente:
+\[
+  f(x_1, \dots, x_n|\lambda) = \lambda^{x_1 + \dots + x_n} e^{-n\lambda}\,  \frac{1}{x_1!\cdots x_n!} \equiv g(T(x_1, \dots, x_n);\lambda) \times h(x_1, \dots, x_n),
+\]
+$$g(z;\lambda) = \lambda^{nz} e^{-n\lambda}; \quad h(\vec{x}) = \frac{1}{x_1!\cdots x_n!}$$
+Luego satisface la descomposición de Fisher y es suficiente. Además es minimal pues dados $\vec{x} \in C_{t_1} \cancel{\sim} \vec{y} \in C_{t_2}$:
+\[
+  \frac{f_{\vec{X}}(\vec{x};\lambda)}{f_{\vec{X}}(\vec{y};\lambda)} = \lambda^{(x_1 + \dots + x_n - y_1 - \dots - y_n)}\frac{y_1!\cdots y_n!}{x_1!\cdots x_n!} = \frac{y_1!\cdots y_n!}{x_1!\cdots x_n!} \cdot
+  \begin{cases}
+    1, & \vec{x} \sim \vec{y}\ (C_{t_1} = C_{t_2}), \\
+    \lambda^{n(t_1 - t_2)}, & C_{t_1} \neq C_{t_2}.
+  \end{cases}
+\]
+\end{ejemplo}
+\textcolor{blue}{
+\begin{proposicion}[10]
+Si un contraste de hipótesis es de la máxima potencia entonces el estadístico $\Theta \coloneqq T(X_1, \dots, X_n)$ asociado es minimal suficiente.
+\end{proposicion}}
+
+\section{Problemas: estimador de máxima verosimilitud y suficientes}
+
+\begin{enumerate}
+  \item \textbf{Calcular el MLE cuando $X \sim \operatorname{Bernoulli}(p)$:}
+  Tenemos $\operatorname{Im} X = \{0, 1\}$ con probabilidades $q, p$. Si $x_k \in \{0, 1\}$ y $\Prob(X_1 = 0) = q = 1 - \Prob(X_1 = 1)$, la función de masa conjunta del vector $(X_1, \dots, X_n)$ es
+  \[
+    f(x_1, x_2, \dots, x_n) = \Prob(X_1 = x_1)\cdots\Prob(X_n = x_n) = p^j q^{n-j},
+  \]
+  donde $j = \#\{x_k = 1\}$. Además $j = x_1 + \dots + x_n$ (los ``otros'' términos suman $0$). Luego:
+  \[
+    \ell(p) = p^j(1-p)^{n-j} \implies \frac{d}{dp} \ell(p) = p^{j-1}(1-p)^{n-j-1}\bigl(j(1-p) - p(n-j)\bigr) = 0 \]
+    \[ \iff p = \frac{j}{n} \iff p = \overline{X}_n.
+  \]
+
+  \item \textbf{Sea $p$ el número de caras que han ocurrido al lanzar una moneda trucada un total de $N$ veces, de la que se desconoce su probabilidad de cara, $p$. Calcular el MLE para $p$ observado que $j$ tiradas son cara y el resto cruz:}
+  Es el problema anterior donde $C = 1$, $X = 0$, y $\hat{\Omega} = \Omega \times \dots \stackrel{N}{\dots} \times \Omega = \{C, X\}^N$. %obteniendo $\hat{p}_{\text{MLE}} = j/N$.
+
+  \item \textbf{Se ha lanzado una moneda trucada, de la que se desconoce su probabilidad de cara, $p$, hasta que ha aparecido la primera cara. Si se han necesitado $N = n$ tiradas, estima la probabilidad de cara $p$:}
+  Podemos resolverlo con métodos de cálculo de probabilidades. La probabilidad de la observación es $\Prob(N = n) = q^{n-1}(1-q) \equiv g(q)$. Derivando:
+  \[
+    g'(q) = q^{n-2}\bigl((n-1)(1-q) - q\bigr) \equiv q^{n-2}\bigl((n-1) - nq\bigr).
+  \]
+  Igualando a $0$ obtenemos el máximo: concluimos que $q = (n-1)/n$ y $p = 1/n$.
+
+  \item \textbf{Calcular el MLE cuando $X \sim \operatorname{Poi}(\lambda)$. ¿Es un estimador suficiente?}
+  
+  La función de masa para una variable $X \sim \operatorname{Poi}(\lambda)$ es
+  \[
+    \Prob(X = x) \coloneqq f(x|\lambda) = \frac{\lambda^x}{x!}e^{-\lambda}, \qquad x \in \N_0, \ \lambda \in \R^+.
+  \]
+  La función de masa conjunta para $n$ pruebas es
+  \[
+    f(x_1, \dots, x_n|\lambda) \coloneqq \frac{\lambda^{x_1 + \dots + x_n}}{x_1!\cdots x_n!}e^{-n\lambda} \equiv \frac{\lambda^a e^{-n\lambda}}{b} \equiv \ell(\lambda),
+  \]
+  con $a \coloneqq x_1 + \dots + x_n$ y $b \coloneqq x_1!\cdots x_n!$. En este caso $$\operatorname{Dom} \ell(\lambda) = (0, \infty), \quad \ell(0) = 0 \quad \text{ y }  \quad \ell(\infty) = \lim_{\lambda\to\infty} \ell(\lambda) = 0$$ 
+  Luego $\ell(\lambda)$ alcanza un máximo en el interior. Calculando la derivada tenemos:
+  \[
+    \ell'(\lambda) = \frac{1}{b}\lambda^{a-1}e^{-n\lambda}(-n\lambda + a) = 0 \implies \lambda_* = \frac{x_1 + \dots + x_n}{n} \equiv \overline{x}_n.
+  \]
+  El MLE es la media muestral $\Theta(X_1, \dots, X_n) = \frac{X_1 + \dots + X_n}{n} \equiv T(X_1, \dots, X_n) \equiv \overline{X}_n$.
+
+  \smallskip
+  \noindent\emph{Suficiencia:}
+  \[
+    f(x_1, \dots, x_n|\lambda) = \lambda^{T(x_1, \dots, x_n)} e^{-n\lambda} \times \frac{1}{x_1!\cdots x_n!} \equiv g(T(x_1, \dots, x_n);\lambda) \times h(x_1, \dots, x_n),
+  \]
+  $$g(z;\lambda) = \lambda^{nz}e^{-n\lambda}; \quad h(x_1, \dots, x_n) = \frac{1}{x_1!\cdots x_n!}$$ Luego satisface la descomposición de Fisher y es suficiente.
+
+  \item \textbf{Sea $X \sim \mathcal{N}(\mu, \sigma^2)$ con $\sigma^2$ conocido. Calcular el MLE de $\mu$ y demostrar que es suficiente:}
+  \[
+    \ell(\mu) \coloneqq f(x_1, \dots, x_n;\mu) = (2\pi\sigma^2)^{-\frac{n}{2}} e^{-\bigl((x_1-\mu)^2 + \dots + (x_n-\mu)^2\bigr)/(2\sigma^2)},
+  \]
+  luego, salvo constante:
+  \[
+    \ln \ell(\mu) \approx -\frac{(x_1-\mu)^2 + \dots + (x_n-\mu)^2}{2\sigma^2},
+  \]
+  \[
+    \frac{d}{d\mu}\ln \ell(\mu) = 0 \iff \sum_{i=1}^n (x_i - \mu) = 0 \iff \mu = \frac{x_1 + \dots + x_n}{n} \equiv \overline{x}_n.
+  \]
+  $\overline{X}_n \coloneqq (X_1 + \dots + X_n)/n$ es suficiente pues $f(x_1, \dots, x_n;\mu)$ satisface la descomposición de Fisher:
+  \[
+    (x_i - \mu)^2 = \bigl((x_i - \overline{x}_n) + (\overline{x}_n - \mu)\bigr)^2 = (x_i - \overline{x}_n)^2 + (\overline{x}_n - \mu)^2 + 2(x_i - \overline{x}_n)(\overline{x}_n - \mu),
+  \]
+  \[
+    \sum_{i=1}^n (x_i - \mu)^2 = \sum_{i=1}^n (x_i - \overline{x}_n)^2 + n(\overline{x}_n - \mu)^2 + 2(\overline{x}_n - \mu)\sum_{i=1}^n (x_i - \overline{x}_n) = \sum_{i=1}^n (x_i - \overline{x}_n)^2 + n(\overline{x}_n - \mu)^2,
+  \]
+  \[
+    f(x_1, \dots, x_n;\mu) = (2\pi\sigma^2)^{-\frac{n}{2}} e^{-n(\overline{x}_n - \mu)^2/(2\sigma^2)} \times e^{-\sum_{i=1}^n (x_i - \overline{x}_n)^2/(2\sigma^2)} \equiv g(\overline{x}_n;\mu)\,h(x_1, \dots, x_n).
+  \]
+
+  \item \textbf{Sea $X \sim \mathcal{N}(\mu, \sigma^2)$ con $\mu, \sigma^2$ desconocidos. Calcular el MLE de $\mu, \sigma$:}
+  Conviene llamar $\sigma^2 \equiv v$ y, salvo constantes, escribir:
+  \[
+    \ln \ell(\mu, v) \approx -\frac{(x_1-\mu)^2 + \dots + (x_n-\mu)^2}{2v} - \frac{n}{2}\log v,
+  \]
+  \[
+    \frac{\partial}{\partial\mu}\ln \ell(\mu, v) = 0 \iff \sum_{i=1}^n (x_i - \mu) = 0 \iff \mu = \frac{1}{n}\sum_{i=1}^n x_i \equiv \overline{x}_n,
+  \]
+  \[
+    \frac{\partial}{\partial v}\ln \ell(\mu, v) = \frac{1}{2v}\left(-n + \frac{1}{v}\sum_{i=1}^n (x_i - \mu)^2\right) = 0 \iff v = \frac{1}{n}\sum_{i=1}^n (x_i - \mu)^2,
+  \]
+  que no es la cuasivarianza y es sesgado.
+
+  \item \textbf{Calcular el MLE cuando $X \sim U(0, \theta)$. ¿Es un estimador suficiente?}
+  \[
+    f(x) = \frac{1}{\theta}\mathbf{1}_{[0,\theta]}(x) \implies \ell(\theta) = \left(\frac{1}{\theta}\right)^n \mathbf{1}_{[0,\theta]}(x_1)\cdots\mathbf{1}_{[0,\theta]}(x_n) = \left(\frac{1}{\theta}\right)^n \cdot 
+    \begin{cases}
+      1, & \text{si } x_1, \dots, x_n \in [0, \theta], \\
+      0, & \text{caso contrario.}
+    \end{cases}
+  \]
+  Como $x_1, \dots, x_n \in [0, \theta] \iff x_{(n)} \equiv \max\{x_1, \dots, x_n\} \in [0, \theta]$, tenemos para $\theta \in (0, \infty)$:
+  \[
+    \ell(\theta) = \left(\frac{1}{\theta}\right)^n \mathbf{1}_{[x_{(n)}, \infty)}(\theta) = \left(\frac{1}{\theta}\right)^n
+    \begin{cases}
+      0, & \theta < x_{(n)}, \\
+      1, & \theta \ge x_{(n)},
+    \end{cases}
+  \]
+  que alcanza un máximo único en el punto $\theta_* \coloneqq x_{(n)}$. Además la suficiencia se sigue de la factorización:
+  \[
+    f(x_1, \dots, x_n;\theta) = \left(\frac{1}{\theta}\right)^n \mathbf{1}_{\max\{x_1, \dots, x_n\} \in [0,\theta]} = \left(\frac{1}{\theta}\right)^n \mathbf{1}_{\Theta(x_1, \dots, x_n) \in [0,\theta]} \equiv g(\Theta;\theta),
+  \]
+  con $\Theta \equiv T(x_1, \dots, x_n) \equiv \max\{x_1, \dots, x_n\}$ y adem\'as 
+  $$g(z;\theta) \coloneqq \left(\frac{1}{\theta}\right)^n \mathbf{1}_{[0,\theta]}(z) = \left(\frac{1}{\theta}\right)^n\cdot \begin{cases}
+     1 , & z \leq \theta \\ 0,  & z > \theta
+  \end{cases}$$
+
+  \item \textbf{Sean $X_1, \dots, X_n \sim \operatorname{Bernoulli}(p)$. Calcular la información de Fisher sobre $p$ de la muestra:}
+  $X \sim \operatorname{Bernoulli}(p) \implies \E X = \E X^2 = p$, $\Prob(X = x) = p^x q^{1-x}$:
+  \begin{align*}
+    I_X(p) = & \, \E\left[\left(\frac{d}{dp}\log\bigl(p^X(1-p)^{1-X}\bigr)\right)^2\right] = \E\left[\left(\frac{d}{dp}\bigl(X\log p + (1-X)\log(1-p)\bigr)\right)^2\right] \\  = & \E\left(\frac{X}{p} - \frac{1-X}{1-p}\right)^2.
+  \end{align*}
+  Por otro lado:
+  \[
+    \E\left(\frac{X}{p} - \frac{1-X}{1-p}\right)^2 = \frac{\E X^2}{p^2} + \frac{\E(1-X)^2}{(1-p)^2} - 2\frac{\E\bigl(X(1-X)\bigr)}{p(1-p)} = \frac{p}{p^2} - \frac{2\cdot 0}{p(1-p)} + \frac{q}{q^2} = \frac{1}{p(1-p)}.
+  \]
+  Como $\Var\overline{X}_n = \frac{\sigma^2}{n} = \frac{p(1-p)}{n} = \frac{1}{n I(p)}$, por Cramér-Rao $\overline{X}_n$ es estimador de $p$ consistente, sin sesgo, suficiente, de máxima eficiencia y de máxima verosimilitud.
+
+  \smallskip\noindent\textcolor{blue}{\textbf{Interpretación:} Incorrecto, Wikipedia: La información de Fisher mide la cantidad de información que una sola observación de Bernoulli proporciona sobre el parámetro desconocido $p$. Una información de Fisher alta significa que los datos observados son muy sensibles a cambios en $p$. \\    
+    Puntos de máxima información (ocurren cuando $p \to 0$ o $p \to 1$): Interpretación: un solo resultado inesperado nos da muchísima información para ajustar nuestra creencia sobre el valor real de $p$. Hay poca incertidumbre sobre el resultado esperado, por lo que una desviación es muy informativa.\\    
+    Punto de mínima información (cuando $p = 0{,}5$): una sola observación es la menos informativa posible.}
+    
+    Correcto es (JVR) información de Fisher mide la bondad de la conjetura sobre el parámetro a partir de una única observación: Si el valor real de $\theta$ es cercano a $\theta_0 \coloneqq \arg\max I(\theta)$--- y si además $I(\theta)$ es grande--- entonces el estimador construido con la única observación que tenemos sobre el parámetro $T(x_1)$ estará cercana al valor real de $\theta$.
+  \item \textbf{Sea $X_1, \dots, X_n \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(\mu, \sigma^2)$. El estimador sin sesgo de $\mu$ más eficiente es $\overline{X}_n$:}
+  La información de Fisher de $\mu$ es:
+  \begin{align*}
+    I_X(\mu) = & \,  -\E\left[\frac{d^2}{d\mu^2}\log\left(\frac{e^{-(X_1-\mu)^2/(2\sigma^2)}}{\sqrt{2\pi}\sigma}\right)\right] -\E\frac{d^2}{d\mu^2}\left(-\frac{(X_1-\mu)^2}{2\sigma^2} - \log(\sqrt{2\pi}\sigma)\right)  \\ & =\,   \E\left(\frac{1}{\sigma^2}\right) = \frac{1}{\sigma^2}.  
+  \end{align*}
+  Como $\overline{X}_n$ satura la cota de Cramér-Rao ($\Var\overline{X}_n = \frac{\sigma^2}{n} = \frac{1}{n I_X(\mu)}$), no pueden existir estimadores insesgados de $\mu$ más eficientes que $\overline{X}_n$.
+
+  \item \textbf{Sean $X_1, \dots, X_n \sim \operatorname{Bernoulli}(p)$. Calcular la entropía de Shannon sobre $p$:}
+  \begin{align*}      
+    H_X(p) & = -\E\log f(X) = -\E\bigl[\log\bigl(p^X(1-p)^{1-X}\bigr)\bigr] = -\E\bigl[X\log p + (1-X)\log(1-p)\bigr] \\ & = -\bigl(p\log p + (1-p)\log(1-p)\bigr) = -\log\bigl(p^p(1-p)^{1-p}\bigr).
+  \end{align*}
+\end{enumerate}

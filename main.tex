@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{book}
+
+%----------------------------------------------------------------------
+% Paquetes
+%----------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-noquoting]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{nicefrac}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\newcommand{\tachar}[1]{%
+  \begingroup
+  \colorlet{savedcolor}{.}%
+  \renewcommand{\ULthickness}{0.8pt}% grosor de la línea
+  \color{red}\sout{\color{savedcolor}#1}%
+  \endgroup
+}
+
+\geometry{margin=2.5cm}
+
+%----------------------------------------------------------------------
+% Entornos de teoremas
+%----------------------------------------------------------------------
+\theoremstyle{definition}
+\newtheorem*{definicion}{Definition}
+\newtheorem*{ejemplo}{Example}
+\newtheorem*{observacion}{Remark}
+
+\theoremstyle{plain}
+\newtheorem*{proposicion}{Proposition}
+\newtheorem*{corolario}{Corollary}
+\newtheorem*{teorema}{Teorema}
+
+%----------------------------------------------------------------------
+% Comandos útiles
+%----------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Imset}{\operatorname{Im}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Sop}{\operatorname{Sop}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\indep}{\perp\!\!\!\perp}
+
+%======================================================================
+\begin{document}
+\pagenumbering{roman}
+
+% Portada
+\input{titlepage}
+
+% Prefacio
+%\include{Chapters/preface}
+\cleardoublepage
+
+% Índice
+\let\cleardoublepage\clearpage %quita la página en blanco
+\tableofcontents
+
+
+
+% CUERPO -------------------------------------------------------------
+\mainmatter
+\pagenumbering{arabic}
+%======================================================================
+
+\include{cap2.0}
+
+\include{cap2.1}
+
+\include{cap2.2}
+
+\appendix
+
+\include{cap1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%======================================================================
+\end{document}
+%======================================================================
