@@ -553,7 +553,7 @@ El estimador máximo verosímil es simétrico y asintóticamente sin sesgo efici
 $\ell(X_1, \dots, X_n; \theta)$ es función simétrica de sus argumentos; por tanto su máximo también.
 \end{proposicion}
 \begin{teorema}[1]
-Supongamos que la función $l(X_1, \dots, X_n; \theta) \equiv g(\theta)$ satisface: tiene un máximo global único, $g \in \mathcal{C}^0$ es continua, y dominancia: existe $h(x_1, \dots, x_n)$ integrable de modo que $\log \ell(X_1, \dots, X_n; \theta) \le h(x_1, \dots, x_n)$. Entonces:
+Supongamos que la función $\ell (X_1, \dots, X_n; \theta) \equiv g(\theta)$ satisface: tiene un máximo global único, $g \in \mathcal{C}^0$ es continua, y dominancia: existe $h(x_1, \dots, x_n)$ integrable de modo que $\log \ell(X_1, \dots, X_n; \theta) \le h(x_1, \dots, x_n)$. Entonces:
 \begin{enumerate}
   \item \textbf{Consistencia:}
   \[
@@ -576,7 +576,7 @@ La \underline{información de Fisher} $I(\theta) \ge 0$ es
 \[
   I(\theta) \coloneqq \E\left(\frac{\partial}{\partial\theta} \log f(X;\theta)\right)^2 = \int_{-\infty}^{\infty} f(x;\theta)\left(\frac{\partial}{\partial\theta} \log f(x;\theta)\right)^2 dx.
 \]
-\end{definicion}
+\end{definicion} 
 
 \noindent $\star$ $I(\theta)$ mide la cantidad de información que el observable $X$, con densidad $f(x;\theta)$, tiene sobre el parámetro $\theta$. Cuanto más plana es esta función, menos información tiene $X$ sobre $\theta$.
 

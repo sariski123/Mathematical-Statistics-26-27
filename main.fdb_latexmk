@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1795687493 "c:/Users/Yo/OneDrive - Universidad de Salamanca/CLASE/Matemáticas/Tercero/26-27/Estadística/Em_Gem/main.tex" "main.pdf" "main" 1795687511 0
+["pdflatex"] 1795715577 "c:/Users/Yo/OneDrive - Universidad de Salamanca/CLASE/Matemáticas/Tercero/26-27/Estadística/Em_Gem/main.tex" "main.pdf" "main" 1795715588 0
   "Figures/LogoUsal.pdf" 1777564823 1107377 f7a64123045a06ad825a606876704a4c ""
   "c:/Users/Yo/OneDrive - Universidad de Salamanca/CLASE/Matemáticas/Tercero/26-27/Estadística/Em_Gem/main.tex" 1795687320 2586 3cb26e334a99b53e8fe8d89e0beac59d ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1702479021 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -297,18 +297,18 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1702485108 4754915 f164c5801f6387d9d51285b36c40995c ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1702485314 8217693 85aa4e099d3f8ad2beead23968b14b90 ""
   "c:/texlive/2023/texmf.cnf" 1702485079 713 e69b156964470283e0530f5060668171 ""
-  "cap1.aux" 1795687510 1468 e984805b00cac11caf56f5ab037dfc88 "pdflatex"
+  "cap1.aux" 1795715588 1468 e984805b00cac11caf56f5ab037dfc88 "pdflatex"
   "cap1.tex" 1795608661 19291 1d95ffc33f9e2c09b82559d238f4e30d ""
-  "cap2.0.aux" 1795687504 2993 63a985dba1219404a279d26b399d40f7 "pdflatex"
+  "cap2.0.aux" 1795715583 2993 63a985dba1219404a279d26b399d40f7 "pdflatex"
   "cap2.0.tex" 1795687490 88124 9f1c8d9f10868581be21bc76515095ee ""
-  "cap2.1.aux" 1795687504 2142 78521ad040abe2a3c62346bfd14d2891 "pdflatex"
-  "cap2.1.tex" 1795687490 63302 67881f71e0b985ae81526f306fd08336 ""
-  "cap2.2.aux" 1795687509 3718 e93319967ca039496727d53f87d5b3d0 "pdflatex"
+  "cap2.1.aux" 1795715583 2142 78521ad040abe2a3c62346bfd14d2891 "pdflatex"
+  "cap2.1.tex" 1795715564 63306 3112fe3980b21a7ac3404ce638d34f4f ""
+  "cap2.2.aux" 1795715586 3718 e93319967ca039496727d53f87d5b3d0 "pdflatex"
   "cap2.2.tex" 1795687490 92598 443b1ef8809a8199e907b2cca845fbb5 ""
-  "main.aux" 1795687510 342 3df25619f87a39be94cf855b293cff24 "pdflatex"
-  "main.out" 1795687510 9532 029bd24df3a67058ccfc9480b54475fe "pdflatex"
+  "main.aux" 1795715588 342 3df25619f87a39be94cf855b293cff24 "pdflatex"
+  "main.out" 1795715588 9532 029bd24df3a67058ccfc9480b54475fe "pdflatex"
   "main.tex" 1795687320 2586 3cb26e334a99b53e8fe8d89e0beac59d ""
-  "main.toc" 1795687510 4259 523164c7122d0efd6f6b45c3327bb19b "pdflatex"
+  "main.toc" 1795715588 4259 523164c7122d0efd6f6b45c3327bb19b "pdflatex"
   "titlepage.tex" 1795552319 640 577dc396a65a3f1735817d899d4bc6aa ""
   (generated)
   "cap1.aux"
