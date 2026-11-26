@@ -798,4 +798,701 @@ Package caption Info: End \AtBeginDocument code.
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
 * \topmargin=9.66724pt
-* \hea
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=88.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<Figures/LogoUsal.pdf, id=191, 5021.76125pt x 4996.6675pt>
+File: Figures/LogoUsal.pdf Graphic file (type pdf)
+<use Figures/LogoUsal.pdf>
+Package pdftex.def Info: Figures/LogoUsal.pdf  used on input line 6.
+(pdftex.def)             Requested size: 85.35696pt x 84.85835pt.
+ [1
+
+
+
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Figures/LogoUsal.pdf>]) [2
+
+
+] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [3
+
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
+ [4]
+\openout2 = `cap2.0.aux'.
+
+ (./cap2.0.tex [1
+
+
+
+] [2]
+Cap\'{\i }tulo 0.
+
+Overfull \hbox (2.05566pt too wide) detected at line 54
+\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 dx[];  \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 [\OML/cmm/m/it/12 a; b\OT1/cmr/m/n/12 ]) = \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 dx[]:
+ []
+
+[3
+
+]
+LaTeX Info: Redefining \. on input line 126.
+LaTeX Info: Redefining \% on input line 126.
+ [4]
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
+ [5]
+LaTeX Info: Redefining \. on input line 332.
+LaTeX Info: Redefining \% on input line 332.
+ [6]
+LaTeX Info: Redefining \. on input line 387.
+LaTeX Info: Redefining \% on input line 387.
+ [7]
+LaTeX Info: Redefining \. on input line 462.
+LaTeX Info: Redefining \% on input line 462.
+ [8]
+Cap\'{\i }tulo 1.
+
+Overfull \hbox (2.167pt too wide) in paragraph at lines 467--468
+[]\T1/cmr/bx/n/12 Definition \T1/cmr/m/n/12 (13)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Un vec-tor alea-to-rio $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 es una apli-ca-ción $\OT1/cmr/m/n/12 
+ \OMS/cmsy/m/n/12 ! \U/msb/m/n/12 R[]$\T1/cmr/m/n/12 , $\OML/cmm/m/it/12 ! \OMS/cmsy/m/n/12 7! \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; Y\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ))$\T1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (9.26682pt too wide) detected at line 474
+\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) = \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 x; Y \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) [][]= \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [][]= \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 x; y \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 R\OML/cmm/m/it/12 :
+ []
+
+[9
+
+]
+Overfull \hbox (5.89552pt too wide) detected at line 524
+\U/msb/m/n/12 P\OT1/cmr/m/n/12 ((\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 ) = \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 a[]; b[] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 b[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]; b[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]; b[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]; b[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]; b[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
+ []
+
+LaTeX Info: Redefining \. on input line 565.
+LaTeX Info: Redefining \% on input line 565.
+
+Overfull \hbox (29.12114pt too wide) has occurred while \output is active
+\T1/cmr/m/n/12 10 \T1/cmr/m/sl/12 CAPÍTULO 1.  LEYES DE GRANDES NÚMEROS Y TEOREMA CENTRAL DEL LÍMITE
+ []
+
+[10] [11]
+Overfull \hbox (4.28072pt too wide) detected at line 660
+\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (0) = [][] = [][] = \OML/cmm/m/it/12 i [][] xf[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 dx \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 i^^V:
+ []
+
+LaTeX Info: Redefining \. on input line 668.
+LaTeX Info: Redefining \% on input line 668.
+
+Overfull \hbox (29.12114pt too wide) has occurred while \output is active
+\T1/cmr/m/n/12 12 \T1/cmr/m/sl/12 CAPÍTULO 1.  LEYES DE GRANDES NÚMEROS Y TEOREMA CENTRAL DEL LÍMITE
+ []
+
+[12]
+LaTeX Info: Redefining \. on input line 718.
+LaTeX Info: Redefining \% on input line 718.
+ [13]
+LaTeX Info: Redefining \. on input line 785.
+LaTeX Info: Redefining \% on input line 785.
+
+Overfull \hbox (29.12114pt too wide) has occurred while \output is active
+\T1/cmr/m/n/12 14 \T1/cmr/m/sl/12 CAPÍTULO 1.  LEYES DE GRANDES NÚMEROS Y TEOREMA CENTRAL DEL LÍMITE
+ []
+
+[14]
+Overfull \hbox (19.68513pt too wide) detected at line 804
+\OML/cmm/m/it/12 X[] [] X[]  \OMS/cmsy/m/n/12 ([])  \OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 ![]! \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 j \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N\OT1/cmr/m/n/12 ) = 0\OML/cmm/m/it/12 :
+ []
+
+LaTeX Info: Redefining \. on input line 852.
+LaTeX Info: Redefining \% on input line 852.
+[15]
+Overfull \hbox (9.23198pt too wide) in paragraph at lines 890--892
+\T1/cmr/m/n/12 El re-cí-pro-co es fal-so: que $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 )[]$ \T1/cmr/m/n/12 con-ver-ja ha-cia $\OML/cmm/m/it/12 X[]$ \T1/cmr/m/n/12 en dis-tri-bu-ción só-lo di-ce que $[][] \OML/cmm/m/it/12 X[]$
+ []
+
+LaTeX Info: Redefining \. on input line 913.
+LaTeX Info: Redefining \% on input line 913.
+
+Overfull \hbox (29.12114pt too wide) has occurred while \output is active
+\T1/cmr/m/n/12 16 \T1/cmr/m/sl/12 CAPÍTULO 1.  LEYES DE GRANDES NÚMEROS Y TEOREMA CENTRAL DEL LÍMITE
+ []
+
+[16]
+LaTeX Info: Redefining \. on input line 955.
+LaTeX Info: Redefining \% on input line 955.
+ [17]
+Overfull \hbox (2.9897pt too wide) in paragraph at lines 991--992
+[]\T1/cmr/bx/n/12 Teorema \T1/cmr/m/n/12 (14 ^^V $[]$)\T1/cmr/bx/n/12 .
+ []
+
+LaTeX Info: Redefining \. on input line 1009.
+LaTeX Info: Redefining \% on input line 1009.
+
+Overfull \hbox (29.12114pt too wide) has occurred while \output is active
+\T1/cmr/m/n/12 18 \T1/cmr/m/sl/12 CAPÍTULO 1.  LEYES DE GRANDES NÚMEROS Y TEOREMA CENTRAL DEL LÍMITE
+ []
+
+[18]
+LaTeX Info: Redefining \. on input line 1048.
+LaTeX Info: Redefining \% on input line 1048.
+ [19]
+Overfull \hbox (33.42982pt too wide) in paragraph at lines 1066--1067
+[]\T1/cmr/m/n/12 Supongamos que la su-ce-sión $\OML/cmm/m/it/12 X[]; [] ; X[]; [] [] []\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)$ \T1/cmr/m/n/12 y que $\OML/cmm/m/it/12 Y[] \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 .
+ []
+
+LaTeX Info: Redefining \. on input line 1072.
+LaTeX Info: Redefining \% on input line 1072.
+
+Overfull \hbox (29.12114pt too wide) has occurred while \output is active
+\T1/cmr/m/n/12 20 \T1/cmr/m/sl/12 CAPÍTULO 1.  LEYES DE GRANDES NÚMEROS Y TEOREMA CENTRAL DEL LÍMITE
+ []
+
+[20]
+LaTeX Info: Redefining \. on input line 1080.
+LaTeX Info: Redefining \% on input line 1080.
+ [21]
+Cap\'{\i }tulo 2.
+[22
+
+]
+LaTeX Info: Redefining \. on input line 1186.
+LaTeX Info: Redefining \% on input line 1186.
+ [23]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\to' on input line 1188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1212.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\to' on input line 1212.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1212.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1212.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1212.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1212.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1212.
+
+LaTeX Info: Redefining \. on input line 1216.
+LaTeX Info: Redefining \% on input line 1216.
+[24]
+Overfull \hbox (3.98131pt too wide) in paragraph at lines 1277--1277
+[]\T1/cmr/bx/n/12 Proposition \T1/cmr/m/n/12 (29 ^^V $[]$)\T1/cmr/bx/n/12 . []\T1/cmr/m/it/12 Sean $\OML/cmm/m/it/12 X; Y$ \T1/cmr/m/it/12 v.a.s con den-si-dad con-jun-ta $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$\T1/cmr/m/it/12 .
+ []
+
+LaTeX Info: Redefining \. on input line 1277.
+LaTeX Info: Redefining \% on input line 1277.
+[25]
+LaTeX Info: Redefining \. on input line 1313.
+LaTeX Info: Redefining \% on input line 1313.
+ [26]
+LaTeX Info: Redefining \. on input line 1358.
+LaTeX Info: Redefining \% on input line 1358.
+ [27]
+LaTeX Info: Redefining \. on input line 1408.
+LaTeX Info: Redefining \% on input line 1408.
+ [28]
+Overfull \hbox (33.42982pt too wide) in paragraph at lines 1419--1420
+[]\T1/cmr/m/n/12 Supongamos que la su-ce-sión $\OML/cmm/m/it/12 X[]; [] ; X[]; [] [] []\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)$ \T1/cmr/m/n/12 y que $\OML/cmm/m/it/12 Y[] \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 .
+ []
+
+LaTeX Info: Redefining \. on input line 1446.
+LaTeX Info: Redefining \% on input line 1446.
+[29]
+LaTeX Info: Redefining \. on input line 1476.
+LaTeX Info: Redefining \% on input line 1476.
+ [30]
+LaTeX Info: Redefining \. on input line 1507.
+LaTeX Info: Redefining \% on input line 1507.
+ [31]
+Overfull \hbox (4.79414pt too wide) detected at line 1517
+[]
+ []
+
+
+Overfull \hbox (6.27283pt too wide) detected at line 1530
+\U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 0) = \U/msb/m/n/12 P  [] \OT1/cmr/m/n/12 = \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N[] \OMS/cmsy/m/n/12 ^^U ^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 3) = 1 \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^H(\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 3) = ^^H(1\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 3) = 0[]63\OML/cmm/m/it/12 :
+ []
+
+LaTeX Info: Redefining \. on input line 1551.
+LaTeX Info: Redefining \% on input line 1551.
+[32]
+LaTeX Info: Redefining \. on input line 1586.
+LaTeX Info: Redefining \% on input line 1586.
+ [33])
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+ [34]
+\openout2 = `cap2.1.aux'.
+
+ (./cap2.1.tex [35
+
+
+
+
+] [36]
+Cap\'{\i }tulo 3.
+
+Overfull \hbox (15.49895pt too wide) detected at line 25
+\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; x[]; [] ; x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Q \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 x[]; [] ; X[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) = \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) [] \U/msb/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 p[] [] p[]:
+ []
+
+
+Overfull \hbox (31.4669pt too wide) in paragraph at lines 41--42
+[]\T1/cmr/m/n/12 Llamaremos \T1/cmr/m/it/12 ob-ser-va-ción\T1/cmr/m/n/12 , $[]$ al vec-tor $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Q \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 )) =
+ []
+
+[37
+
+]
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+ [38]
+Overfull \hbox (14.90019pt too wide) in paragraph at lines 111--112
+[]\T1/cmr/m/n/12 Simula $\OML/cmm/m/it/12 ^^R$ \T1/cmr/m/n/12 si es \T1/cmr/m/it/12 asin-tó-ti-ca-men-te in-ses-ga-do\T1/cmr/m/n/12 : $[][] [][] \OT1/cmr/m/n/12 = 0$\T1/cmr/m/n/12 . Al-ter-na-ti-va-men-te, $\U/msb/m/n/12 E\OT1/cmr/m/n/12 ^^B[] []
+ []
+
+LaTeX Info: Redefining \. on input line 151.
+LaTeX Info: Redefining \% on input line 151.
+[39]
+LaTeX Info: Redefining \. on input line 249.
+LaTeX Info: Redefining \% on input line 249.
+ [40]
+LaTeX Info: Redefining \. on input line 249.
+LaTeX Info: Redefining \% on input line 249.
+ [41]
+LaTeX Info: Redefining \. on input line 286.
+LaTeX Info: Redefining \% on input line 286.
+ [42]
+LaTeX Info: Redefining \. on input line 336.
+LaTeX Info: Redefining \% on input line 336.
+ [43]
+Overfull \hbox (7.0752pt too wide) detected at line 356
+[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) = 2[](\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) = [] = 8[]8;  ^^B(\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 )[] = [] \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 8[]69 = 9[]6
+ []
+
+
+Overfull \hbox (3.56113pt too wide) detected at line 384
+[] \OMS/cmsy/m/n/12 ^^X N\OT1/cmr/m/n/12 (20\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 5\OML/cmm/m/it/12 =n\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  [] \OMS/cmsy/m/n/12 ^^X N\OT1/cmr/m/n/12 (18\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 4\OML/cmm/m/it/12 =n\OT1/cmr/m/n/12 )  =[]\OMS/cmsy/m/n/12 )  [] ^^@ [] ^^X N\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^V[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]; ^^[[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 N\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 9\OML/cmm/m/it/12 =n\OT1/cmr/m/n/12 )
+ []
+
+LaTeX Info: Redefining \. on input line 384.
+LaTeX Info: Redefining \% on input line 384.
+[44]
+Overfull \hbox (26.19244pt too wide) detected at line 408
+[] \OT1/cmr/m/n/12 ^^B[] = [] [] = []([] \OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 + [] + [] \OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 ) = [] [] \OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 = [] [] 0
+ []
+
+LaTeX Info: Redefining \. on input line 437.
+LaTeX Info: Redefining \% on input line 437.
+[45]
+Overfull \hbox (3.81372pt too wide) detected at line 459
+[] \OT1/cmr/m/n/12 ^^B[] = []([] \OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 + [] ) = [] \OMS/cmsy/m/n/12 ^^A [] [] \OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 > [] \OT1/cmr/m/n/12 ^^B[] \OMS/cmsy/m/n/12 ^^Q []
+ []
+
+LaTeX Info: Redefining \. on input line 476.
+LaTeX Info: Redefining \% on input line 476.
+[46]
+LaTeX Info: Redefining \. on input line 482.
+LaTeX Info: Redefining \% on input line 482.
+ [47]
+Cap\'{\i }tulo 4.
+
+Overfull \hbox (4.65681pt too wide) in paragraph at lines 485--486
+[]\T1/cmr/m/n/12 Supongamos que he-mos ob-ser-va-do los re-sul-ta-dos de $\OML/cmm/m/it/12 n$ \T1/cmr/m/n/12 prue-bas $\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 x[]; [] ; X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) =
+ []
+
+[48
+
+] [49]
+LaTeX Info: Redefining \. on input line 632.
+LaTeX Info: Redefining \% on input line 632.
+ [50]
+LaTeX Info: Redefining \. on input line 685.
+LaTeX Info: Redefining \% on input line 685.
+ [51]
+Overfull \hbox (3.7452pt too wide) detected at line 742
+\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 ([]; \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ) [] ;  \OML/cmm/m/it/12 B\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ) = [] \OML/cmm/m/it/12 dx[] [] [] dx[] A\OT1/cmr/m/n/12 ([]; \OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;
+ []
+
+LaTeX Info: Redefining \. on input line 742.
+LaTeX Info: Redefining \% on input line 742.
+[52]
+Overfull \hbox (50.41454pt too wide) in paragraph at lines 751--753
+[]\T1/cmr/bx/n/12 Teorema \T1/cmr/m/n/12 (3 --- $[]$)\T1/cmr/bx/n/12 . []\T1/cmr/m/it/12 Su-pon-ga-mos que $\OT1/cmr/m/n/12 ^^B [][]= \OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/m/n/12 )$
+ []
+
+
+Overfull \hbox (9.23708pt too wide) detected at line 772
+\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 t  \OMS/cmsy/m/n/12 ([])  \OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; x[]; [] ; x[]\OT1/cmr/m/n/12 )[][] [][]= (\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; x[]; [] ; x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; x[]; [] ; x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 R[]
+ []
+
+
+Overfull \hbox (3.73625pt too wide) in paragraph at lines 790--791
+[]\T1/cmr/bx/n/12 Teorema \T1/cmr/m/n/12 (4 --- $[]$)\T1/cmr/bx/n/12 . []\T1/cmr/m/it/12 Si $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 ([]; \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 )$ \T1/cmr/m/it/12 cum-
+ []
+
+LaTeX Info: Redefining \. on input line 791.
+LaTeX Info: Redefining \% on input line 791.
+[53]
+Overfull \hbox (19.5524pt too wide) in paragraph at lines 807--809
+\T1/cmr/m/n/12 que no de-pen-de del pa-rá-me-tro (pues $\OML/cmm/m/it/12 S\OT1/cmr/m/n/12 ([])$ \T1/cmr/m/n/12 es es-ti-ma-dor su-fi-cien-te de $\OML/cmm/m/it/12 ^^R$\T1/cmr/m/n/12 ), lue-go $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 )$
+ []
+
+LaTeX Info: Redefining \. on input line 879.
+LaTeX Info: Redefining \% on input line 879.
+[54]
+Overfull \hbox (19.63286pt too wide) detected at line 879
+\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 ([]) \OMS/cmsy/m/n/12 ^^Q \U/msb/m/n/12 P\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ^^T []\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (	[]([])) \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) = [][] [][] \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z[]; z[]\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 dz[] dz[]\OT1/cmr/m/n/12 ;  \OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y[]; y[]\OT1/cmr/m/n/12 )
+ []
+
+LaTeX Info: Redefining \. on input line 890.
+LaTeX Info: Redefining \% on input line 890.
+[55]
+LaTeX Info: Redefining \. on input line 935.
+LaTeX Info: Redefining \% on input line 935.
+ [56]
+LaTeX Info: Redefining \. on input line 978.
+LaTeX Info: Redefining \% on input line 978.
+
+Overfull \hbox (3.2576pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 4.4.  PROBLEMAS: ESTIMADOR DE MÁXIMA VEROSIMILITUD Y SUFICIENTES \T1/cmr/m/n/12 57
+ []
+
+[57]
+Overfull \hbox (23.28142pt too wide) detected at line 981
+[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 )[] = [](\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ [][]\OT1/cmr/m/n/12 )[] + \OML/cmm/m/it/12 n\OT1/cmr/m/n/12 ([][] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 )[] + 2([][] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 ) [](\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ [][]\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ [][]\OT1/cmr/m/n/12 )[] + \OML/cmm/m/it/12 n\OT1/cmr/m/n/12 ([][] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 ;
+ []
+
+
+Overfull \hbox (22.71532pt too wide) detected at line 984
+\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 ) = (2\OML/cmm/m/it/12 ^^Y^^[[]\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 ([][]; \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
+ []
+
+
+Overfull \hbox (52.83957pt too wide) detected at line 1006
+\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = []\OT1/cmr/bx/n/12 1[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )  =[]\OMS/cmsy/m/n/12 )  \OML/cmm/m/it/12 `\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ) = [][] \OT1/cmr/bx/n/12 1[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) [] \OT1/cmr/bx/n/12 1[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) = [][] \OMS/cmsy/m/n/12 ^^A []
+ []
+
+
+Overfull \hbox (5.49527pt too wide) detected at line 1028
+[]
+ []
+
+
+Overfull \hbox (28.87279pt too wide) detected at line 1032
+\U/msb/m/n/12 E [][] \OT1/cmr/m/n/12 = [] + [] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2[] = [] \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 + [] = []\OML/cmm/m/it/12 :
+ []
+
+LaTeX Info: Redefining \. on input line 1032.
+LaTeX Info: Redefining \% on input line 1032.
+[58]
+Overfull \hbox (10.63173pt too wide) detected at line 1050
+[]
+ []
+
+)
+LaTeX Info: Redefining \. on input line 90.
+LaTeX Info: Redefining \% on input line 90.
+
+Overfull \hbox (3.2576pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 4.4.  PROBLEMAS: ESTIMADOR DE MÁXIMA VEROSIMILITUD Y SUFICIENTES \T1/cmr/m/n/12 59
+ []
+
+[59]
+\openout2 = `cap2.2.aux'.
+
+ (./cap2.2.tex
+Cap\'{\i }tulo 5.
+[60
+
+
+
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 107.
+ (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 121.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Theta' on input line 121.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 121.
+
+LaTeX Info: Redefining \. on input line 129.
+LaTeX Info: Redefining \% on input line 129.
+[61]
+Overfull \hbox (20.41129pt too wide) detected at line 134
+\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 ) = 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 ) = []  =[]\OMS/cmsy/m/n/12 )  \OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 ) = []  =[]\OMS/cmsy/m/n/12 )  \OML/cmm/m/it/12 a[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 F[] [] \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 Q[]:
+ []
+
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
+[62]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 173.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 173.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 173.
+
+LaTeX Info: Redefining \. on input line 215.
+LaTeX Info: Redefining \% on input line 215.
+[63]
+LaTeX Info: Redefining \. on input line 262.
+LaTeX Info: Redefining \% on input line 262.
+ [64]
+Overfull \hbox (0.6433pt too wide) in paragraph at lines 265--266
+[]$\OML/cmm/m/it/12 P[] [][]\OT1/cmr/m/n/12 = \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (^^B[]\OML/cmm/m/it/12 ; ^^R\OT1/cmr/m/n/12 ) [][]= \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; ^^R\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]; [] ; X[]; ^^R\OT1/cmr/m/n/12 )$ \T1/cmr/m/it/12 tie-ne dis-tri-bu-ción $\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Q
+ []
+
+LaTeX Info: Redefining \. on input line 312.
+LaTeX Info: Redefining \% on input line 312.
+[65]
+Overfull \hbox (17.68677pt too wide) detected at line 328
+\OML/cmm/m/it/12  \OT1/cmr/m/n/12 = \U/msb/m/n/12 P[]\OT1/cmr/m/n/12 ^^B \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]; a[]\OT1/cmr/m/n/12 )[]  =[]\OMS/cmsy/m/n/12 )  \OML/cmm/m/it/12  \OT1/cmr/m/n/12 = [] \U/msb/m/n/12 P[]\OT1/cmr/m/n/12 ^^B \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 A[][] \OT1/cmr/m/n/12 = \U/msb/m/n/12 P [] \OT1/cmr/m/n/12 = \U/msb/m/n/12 P [] \OML/cmm/m/it/12 :
+ []
+
+
+Overfull \hbox (5.66454pt too wide) detected at line 345
+\OML/cmm/m/it/12 P[] \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 ([][]; \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 ) [][]= ([][] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 ^^F \OMS/cmsy/m/n/12 ^^Q \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 + [] + \OML/cmm/m/it/12 X[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 n^^V\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 ^^F \OMS/cmsy/m/n/12 ^^Q \OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 ^^V\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^X N\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)
+ []
+
+LaTeX Info: Redefining \. on input line 363.
+LaTeX Info: Redefining \% on input line 363.
+[66]
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
+ [67]
+LaTeX Info: Redefining \. on input line 438.
+LaTeX Info: Redefining \% on input line 438.
+ [68]
+LaTeX Info: Redefining \. on input line 486.
+LaTeX Info: Redefining \% on input line 486.
+ [69]
+LaTeX Info: Redefining \. on input line 532.
+LaTeX Info: Redefining \% on input line 532.
+ [70]
+LaTeX Info: Redefining \. on input line 536.
+LaTeX Info: Redefining \% on input line 536.
+ [71]
+Cap\'{\i }tulo 6.
+[72
+
+]
+LaTeX Info: Redefining \. on input line 619.
+LaTeX Info: Redefining \% on input line 619.
+ [73]
+LaTeX Info: Redefining \. on input line 714.
+LaTeX Info: Redefining \% on input line 714.
+ [74]
+LaTeX Info: Redefining \. on input line 727.
+LaTeX Info: Redefining \% on input line 727.
+ [75]
+LaTeX Info: Redefining \. on input line 954.
+LaTeX Info: Redefining \% on input line 954.
+ [76]
+LaTeX Info: Redefining \. on input line 954.
+LaTeX Info: Redefining \% on input line 954.
+ [77]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [78]
+LaTeX Info: Redefining \. on input line 1035.
+LaTeX Info: Redefining \% on input line 1035.
+ [79]
+LaTeX Info: Redefining \. on input line 1079.
+LaTeX Info: Redefining \% on input line 1079.
+ [80]
+Overfull \hbox (9.23607pt too wide) in paragraph at lines 1088--1089
+[]\T1/cmr/bx/n/12 Contraste bi(uni)lateral de me-dia con va-rian-za des-co-no-ci-da: \T1/cmr/m/n/12 Pi-vo-te $\OML/cmm/m/it/12 t$\T1/cmr/m/n/12 -Student. 
+ []
+
+LaTeX Info: Redefining \. on input line 1130.
+LaTeX Info: Redefining \% on input line 1130.
+[81]
+Overfull \hbox (10.86957pt too wide) in paragraph at lines 1166--1167
+$[]$
+ []
+
+LaTeX Info: Redefining \. on input line 1174.
+LaTeX Info: Redefining \% on input line 1174.
+[82]
+LaTeX Info: Redefining \. on input line 1226.
+LaTeX Info: Redefining \% on input line 1226.
+ [83]
+LaTeX Info: Redefining \. on input line 1272.
+LaTeX Info: Redefining \% on input line 1272.
+ [84]
+Overfull \hbox (4.2157pt too wide) detected at line 1291
+ \OMS/cmsy/m/n/12 ([])  \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 =k < e[]  \OMS/cmsy/m/n/12 ([])  [] \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 =k < n[]\OT1/cmr/m/n/12 2[][](\OML/cmm/m/it/12 ^^V[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ^^V[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[][]=\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 )
+ []
+
+LaTeX Info: Redefining \. on input line 1326.
+LaTeX Info: Redefining \% on input line 1326.
+[85]
+LaTeX Info: Redefining \. on input line 1375.
+LaTeX Info: Redefining \% on input line 1375.
+ [86]
+Overfull \hbox (10.86957pt too wide) in paragraph at lines 1393--1394
+$[]$
+ []
+
+LaTeX Info: Redefining \. on input line 1414.
+LaTeX Info: Redefining \% on input line 1414.
+[87]
+Overfull \hbox (39.32045pt too wide) in paragraph at lines 1439--1441
+\T1/cmr/m/n/12 contraste uni-la-te-ral su-pe-rior, lue-go sa-be-mos que la re-gión de re-cha-zo es $\OML/cmm/m/it/12 F \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1[] \OT1/cmr/m/n/12 =
+ []
+
+LaTeX Info: Redefining \. on input line 1446.
+LaTeX Info: Redefining \% on input line 1446.
+[88]
+LaTeX Info: Redefining \. on input line 1501.
+LaTeX Info: Redefining \% on input line 1501.
+ [89]
+Overfull \hbox (29.59273pt too wide) in paragraph at lines 1509--1510
+$[]$ 
+ []
+
+)
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+ [90]
+\openout2 = `cap1.aux'.
+
+ (./cap1.tex
+Ap\'{e}ndice A.
+[91
+
+
+
+
+]
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
+ [92]
+LaTeX Info: Redefining \. on input line 235.
+LaTeX Info: Redefining \% on input line 235.
+ [93]
+Underfull \vbox (badness 3803) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 333.
+LaTeX Info: Redefining \% on input line 333.
+ [94]
+Overfull \hbox (109.67976pt too wide) in paragraph at lines 336--345
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 375.
+LaTeX Info: Redefining \% on input line 375.
+[95]
+Overfull \hbox (7.42975pt too wide) in paragraph at lines 392--393
+\T1/cmr/m/it/12 fun-ción ca-rac-te-rís-ti-ca de la su-ma $\OML/cmm/m/it/12 Y \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 + [] + \OML/cmm/m/it/12 X[]$ \T1/cmr/m/it/12 es el pro-duc-to $\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 )$\T1/cmr/m/it/12 . 
+ []
+
+LaTeX Info: Redefining \. on input line 421.
+LaTeX Info: Redefining \% on input line 421.
+[96])
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+ [97] (./main.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+ (./cap2.0.aux) (./cap2.1.aux) (./cap2.2.aux) (./cap1.aux))
+ ***********
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-12-11>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 029BD24DF3A67058CCFC9480B54475FE;9532.
+ ) 
+Here is how much of TeX's memory you used:
+ 39156 strings out of 474175
+ 879778 string characters out of 5749697
+ 1962460 words of memory out of 5000000
+ 60301 multiletter control sequences out of 15000+600000
+ 597847 words of font info for 124 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 102i,18n,107p,843b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfso0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (101 pages, 2175851 bytes).
+PDF statistics:
+ 1386 PDF objects out of 1440 (max. 8388607)
+ 1184 compressed objects within 12 object streams
+ 534 named destinations out of 1000 (max. 500000)
+ 390 words of extra memory for PDF output out of 10000 (max. 10000000)
+
