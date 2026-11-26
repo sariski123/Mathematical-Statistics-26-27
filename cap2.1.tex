@@ -100,7 +100,7 @@ El $\operatorname{ECM}$ verifica:
 
 \begin{proof}[Demostración]
 Es obvio que $\Var B_n = \Var\Theta_n$, que equivale al enunciado. Otra demo directa fue vista en la lección 1, Prop.\ 22:
-\textcolor{blue}{\begin{align*}
+\textcolor{azulresalt}{\begin{align*}
   \Var\Theta_n &= \E(\Theta_n - \theta + \theta - \mu_n)^2 = \E(\Theta_n - \theta)^2 + \E(\theta - \mu_n)^2 + 2\E(\Theta_n - \theta)\E(\theta - \mu_n) \\
                &= \E(\Theta_n - \theta)^2 - (\theta - \mu_n)^2.
 \end{align*}}
@@ -122,7 +122,7 @@ En las condiciones anteriores decimos que $\Theta_n \coloneqq T(X_1, \dots, X_n)
   \item \emph{Eficiencia}: Un estimador $\Theta_n$ es eficiente si alcanza el límite inferior de Cramér-Rao, lo que significa que tiene la varianza más baja posible.
 \end{enumerate}
 \end{definicion}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \noindent \textbf{Simetría bajo un grupo de transformaciones:} Si $g : \R^n \to \R^n$ denota la acción de un grupo de transformaciones en $\R^n$, entonces puede cumplirse que
 \[
   T(X_1, \dots, X_n) = T(g \cdot (X_1, \dots, X_n)).
@@ -153,7 +153,7 @@ coincide con el valor real del parámetro para cualquier realización $X_1(\omeg
 \begin{proposicion}[2]
 Supongamos que $(\Theta_n)_{n=1}^\infty$ satisface P1 y P3 (o, en particular, P2 y P3). Entonces $(\Theta_n)_{n=1}^\infty$ es consistente en media cuadrática y en probabilidad.
 \end{proposicion}
-\textcolor{blue}{\begin{proof}[Demostración]
+\textcolor{azulresalt}{\begin{proof}[Demostración]
 Prop. 22 de la Lección 1: $\text{P1} + \text{P3} \Rightarrow \text{P4} \Rightarrow$ convergencia en media cuadrática y, por desigualdad de Chebyshev, en probabilidad.
 \end{proof}}
 
@@ -200,7 +200,7 @@ Se llama \emph{quasi-varianza muestral} al estadístico
 \begin{observacion}[6]
 No confundir la media de la distribución $\mu \coloneqq \E X_1$ con la media muestral $\overline{X}_n$, ni la varianza de la distribución $\sigma^2 \coloneqq \Var X_1$ con la varianza de la media muestral $\sigma^2/n$, ni con la quasi-varianza muestral $S_n^2$.
 \end{observacion}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[4 — Consistencia de la quasi-varianza muestral]
 Sea $X_1, \dots, X_n$ una muestra aleatoria con $\sigma^2 \coloneqq \Var X_1 < \infty$ y $4$ momentos $\alpha_j = \E X_1^j < \infty$, $j = 1, 2, 3, 4$. Entonces:
 \begin{enumerate}
@@ -826,7 +826,7 @@ Si $\Theta \coloneqq T(X_1, \dots, X_n)$ es suficiente entonces la función de v
 \]
 Como $S$ es estimador para $\theta$, por el principio de invarianza $G(S)$ lo sería de $G(\theta)$. Pero hemos supuesto que $\Theta_{\text{MLE}}$ es el MLE de $\theta$, luego $G(x) = x$.
 \end{proof}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[9]
 Aquí evaluamos las anteriores en el caso $n = 2$. Sea $T : \R^2 \to \R$ tal que la función restricción $x_1 \mapsto T(x_1, x_2)$ satisface para cada $x_2 \in S_{X_2}$:
 \begin{enumerate}
@@ -908,7 +908,7 @@ Luego satisface la descomposición de Fisher y es suficiente. Además es minimal
   \end{cases}
 \]
 \end{ejemplo}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[10]
 Si un contraste de hipótesis es de la máxima potencia entonces el estadístico $\Theta \coloneqq T(X_1, \dots, X_n)$ asociado es minimal suficiente.
 \end{proposicion}}
@@ -1032,7 +1032,7 @@ Si un contraste de hipótesis es de la máxima potencia entonces el estadístico
   \]
   Como $\Var\overline{X}_n = \frac{\sigma^2}{n} = \frac{p(1-p)}{n} = \frac{1}{n I(p)}$, por Cramér-Rao $\overline{X}_n$ es estimador de $p$ consistente, sin sesgo, suficiente, de máxima eficiencia y de máxima verosimilitud.
 
-  \smallskip\noindent\textcolor{blue}{\textbf{Interpretación:} Incorrecto, Wikipedia: La información de Fisher mide la cantidad de información que una sola observación de Bernoulli proporciona sobre el parámetro desconocido $p$. Una información de Fisher alta significa que los datos observados son muy sensibles a cambios en $p$. \\    
+  \smallskip\noindent\textcolor{azulresalt}{\textbf{Interpretación:} Incorrecto, Wikipedia: La información de Fisher mide la cantidad de información que una sola observación de Bernoulli proporciona sobre el parámetro desconocido $p$. Una información de Fisher alta significa que los datos observados son muy sensibles a cambios en $p$. \\    
     Puntos de máxima información (ocurren cuando $p \to 0$ o $p \to 1$): Interpretación: un solo resultado inesperado nos da muchísima información para ajustar nuestra creencia sobre el valor real de $p$. Hay poca incertidumbre sobre el resultado esperado, por lo que una desviación es muy informativa.\\    
     Punto de mínima información (cuando $p = 0{,}5$): una sola observación es la menos informativa posible.}
     

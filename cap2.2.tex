@@ -6,7 +6,7 @@
 Sea $X$ una v.a.\ continua con función de distribución $F$. Si $p \in (0,1)$, el $p$-cuantil, denotado por $Q(p)$ o $Q_p$, es
 \[
   Q_p = \inf\{x : F_X(x) = p\} = F_X^{-1}(p).
-\]\textcolor{blue}{
+\]\textcolor{azulresalt}{
 Si $X$ no es necesariamente una v.a.\ continua, $F_X$ no define una función biyectiva en $[0,1]$ y la ecuación anterior puede no tener solución; en ese caso definimos
 \[
   Q_p = \inf\{x : F(x) \ge p\}.
@@ -287,11 +287,11 @@ Entonces, dado un $\alpha$-valor:
 \end{teorema}
 
 \begin{observacion}[34]
-Si $P_n \coloneqq g(\Theta_n, \theta)$ y $\Theta_n$ tiene distribución $F_{\Theta}(y;\textcolor{blue}{ \theta)}$, entonces
+Si $P_n \coloneqq g(\Theta_n, \theta)$ y $\Theta_n$ tiene distribución $F_{\Theta}(y;\textcolor{azulresalt}{ \theta)}$, entonces
 \[
-  G(\cdot) \equiv F_{P_n}(\cdot) = F_{\Theta}\bigl(g_1^{-1}(\cdot\textcolor{blue}{, \theta); \theta\bigr)}
+  G(\cdot) \equiv F_{P_n}(\cdot) = F_{\Theta}\bigl(g_1^{-1}(\cdot\textcolor{azulresalt}{, \theta); \theta\bigr)}
 \]
-\textcolor{blue}{es independiente de $\theta$ (el objetivo es conseguir que ambos factores en $\theta$ se cancelen). }
+\textcolor{azulresalt}{es independiente de $\theta$ (el objetivo es conseguir que ambos factores en $\theta$ se cancelen). }
 \end{observacion}
 
 \begin{proof}
@@ -547,7 +547,7 @@ La situación estándar del contraste clásico de hipótesis parte de un suceso 
 \begin{enumerate}
   \item La \underline{verosimilitud} $\alpha \equiv \Prob(A \mid H_0)$ es la probabilidad de que, supuesta la hipótesis, se observe la evidencia $A$. Supongamos $\alpha = 1$ y que $H_0 \subset A$ ($H_0$ implica $A$). Entonces $A^c \subset H_0^c$, luego si no ocurre $A$ tampoco puede ser cierto $H_0$.
   \item Si ocurre $A$, $H_0$ puede o no ser cierto, y no descartamos que lo sea (de hecho solemos admitirlo con reservas). Esta idea la vamos a extender admitiendo probabilidades, no certezas: $\alpha \equiv \Prob(A \mid H_0) < 1$.
-  \item \textcolor{blue}{\emph{Karl Popper: Filosofía de la ciencia.} El primer paso en el proceso científico no es la observación, sino la generación de una hipótesis que luego puede someterse a una prueba crítica mediante observaciones y experimentos. Popper también hace la importante afirmación de que el objetivo de los esfuerzos del científico no es la verificación, sino la falsificación de la hipótesis inicial.}
+  \item \textcolor{azulresalt}{\emph{Karl Popper: Filosofía de la ciencia.} El primer paso en el proceso científico no es la observación, sino la generación de una hipótesis que luego puede someterse a una prueba crítica mediante observaciones y experimentos. Popper también hace la importante afirmación de que el objetivo de los esfuerzos del científico no es la verificación, sino la falsificación de la hipótesis inicial.}
 \end{enumerate}
 \end{observacion}
 
@@ -619,7 +619,7 @@ $H_0$: la moneda es justa; $H_1 = H_0^c$. $A$: al lanzar la moneda $1000$ veces 
   \item Error de tipo II: decir que la moneda es justa cuando no lo es.
 \end{itemize}
 \end{ejemplo}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{ejemplo}[30]
 $H_0$: el sujeto $S$ tiene COVID; $H_1 = H_0^c$. $A$: el test médico muestra antígenos del COVID. Acción: siempre que el test médico muestra antígenos declaramos que el sujeto $S$ tiene COVID.
 \begin{itemize}
@@ -1041,7 +1041,7 @@ Si además el test se basa en un estadístico suficiente $T(\vec{X})$ con factor
   \].
 \end{enumerate}
 \end{corolario}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \section{Problemas más generales}
 Otros problemas usuales se obtienen con $\Xi_0$ y $\Xi_1 = \Xi_0^c$ dos regiones del espacio de parámetros. Con generalidad queremos probar $\{H_0 : \theta \in \Xi_0\}$ y $\{H_1 : \theta \in \Xi_1\}$.
 \begin{definicion}[80]

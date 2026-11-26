@@ -230,7 +230,7 @@ Supongamos que $X \sim \mathcal{N}(\mu, \sigma^2)$. Entonces:
 \begin{proposicion}[58]
 Supongamos que $X \sim \mathcal{N}(\mu, \sigma^2)$. Entonces:
 \begin{enumerate}
-        \item   \textcolor{blue}{\textbf{Tipificación:} $X \sim \mathcal{N}(\mu, \sigma^2) \Leftrightarrow Y \equiv \left(\frac{X-\mu}{\sigma}\right) \sim \mathcal{N}(0,1)$.
+        \item   \textcolor{azulresalt}{\textbf{Tipificación:} $X \sim \mathcal{N}(\mu, \sigma^2) \Leftrightarrow Y \equiv \left(\frac{X-\mu}{\sigma}\right) \sim \mathcal{N}(0,1)$.
         Además sus funciones de distribución se relacionan por
         \[
           F_X(x) = F_Y\!\left(\frac{x-\mu}{\sigma}\right) \equiv \Phi\!\left(\frac{x-\mu}{\sigma}\right), \quad \forall x \in \R.
@@ -385,7 +385,7 @@ La función $\overline{F}(x) \coloneqq 1 - F(x)$ se denomina \emph{cola}. $\over
 
 La función cuantil de la distribución normal estándar se denomina \emph{función probit}, $\Phi^{-1}(p)$, $p \in (0,1)$, denotada como $z_p$.
 \end{definicion}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[60]
 Si $p \in (0,1)$ y $z_p \coloneqq \Phi^{-1}(p)$:
 \begin{enumerate}
@@ -511,7 +511,7 @@ El soporte de la probabilidad conjunta es la región bidimensional
   S = \{(x,y) : f(x,y) > 0\} \subset \R^2.
 \]
 \end{definicion}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[19]
 Sea $R$ un rectángulo de vértices $v_i = (a_1, b_1), (a_2, b_1), (a_1, b_2), (a_2, b_2)$. La función de distribución conjunta satisface
 \[
@@ -724,7 +724,7 @@ Tenemos $e^{isY} = e^{isX_1 + \dots + isX_n} = e^{iX_1 s} \cdots e^{iX_n s}$. Ad
   \E e^{isY} = \E(e^{iX_1 s} \cdots e^{iX_n s}) = \E e^{iX_1 s} \cdots \E e^{iX_n s} = \phi_{X_1}(s) \cdots \phi_{X_n}(s).
 \]
 \end{proof}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{definicion}[27 — Reproductividad]
 Diremos que una familia de v.a.s $(X_\theta)$ que depende de un parámetro $\theta$ con función característica $\phi(s; \theta)$ es \emph{reproductiva} si existe $g : \R^2 \to \R$ de modo que (ley de grupoide)
 \[
@@ -733,12 +733,12 @@ Diremos que una familia de v.a.s $(X_\theta)$ que depende de un parámetro $\the
 Alternativamente, sea una familia de v.a.s $(X_\theta)$ cuya distribución de probabilidad $\Prob_{X_i; \theta}$ depende de un parámetro $\theta$. Diremos que $\Prob_{X_i; \theta}$ es reproductiva si dadas dos tales v.a.s independientes su suma tiene distribución $\Prob_{X_1; \theta'}$ donde $\theta' = g(\theta_1, \theta_2)$: $\Prob_{X_1 + X_2; \theta} = \Prob_{X_1; \theta'}$.
 \end{definicion}}
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{ejemplo}[9]
 Sean $X_i \sim \mathcal{N}(\mu_i, \sigma_i^2)$, $i=1,2$ independientes. Entonces es reproductiva pues $X_1 + X_2 \sim \mathcal{N}(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$ con $\theta = (\mu, \sigma^2)$; $g(\theta_1, \theta_2) = \theta_1 + \theta_2$.
 \end{ejemplo}}
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[18 — Suma y Reproductividad]
 Dadas $X_i \sim \mathcal{N}(\mu_i, \sigma_i^2)$, $i=1,\dots,n$ independientes:
 \begin{enumerate}
@@ -749,7 +749,7 @@ Dadas $X_i \sim \mathcal{N}(\mu_i, \sigma_i^2)$, $i=1,\dots,n$ independientes:
 }
 \subsection{Distribuciones estadísticas notables}
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{definicion}[28]
 La distribución exponencial $\operatorname{Exp}(\lambda)$ tiene densidad
 \[
@@ -762,7 +762,7 @@ La distribución exponencial $\operatorname{Exp}(\lambda)$ tiene densidad
 \end{definicion}
 }
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{definicion}[29]
 La distribución Gamma $\Gamma(\alpha, \beta)$ tiene densidad
 \[
@@ -772,7 +772,7 @@ donde $\Gamma(\cdot)$ denota la función Gamma.
 \end{definicion}
 }
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{definicion}[30]
 La distribución $\chi^2(k)$ chi-cuadrado con $k$ grados de libertad tiene densidad
 \[
@@ -784,7 +784,7 @@ La distribución $\chi^2(k)$ chi-cuadrado con $k$ grados de libertad tiene densi
 \]
 \end{definicion}}
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{definicion}[31]
 La distribución Erlang $\operatorname{Er}(k, \beta)$ tiene densidad
 \[
@@ -792,7 +792,7 @@ La distribución Erlang $\operatorname{Er}(k, \beta)$ tiene densidad
 \]
 \end{definicion}}
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 Notar que $f_{\chi^2(k)} = f_{\Gamma(\nicefrac{k}{2}, \nicefrac{1}{2})}$, mientras que $f_{\operatorname{Er}(k,\beta)}$ se obtiene cuando $\alpha = k$ es un entero. Además $f_{\operatorname{Er}(1,\beta)}(x; 1, \beta) = \beta e^{-\beta x}$, $\beta \ge 0$, distribución exponencial.}
 
 \section{Convergencia}
@@ -832,7 +832,7 @@ La sucesión $(X_n)_{n=1}^\infty$ converge hacia $X_\infty$ en distribución (tb
   X_n \xrightarrow[n\to\infty]{D} X_\infty \iff \lim_{n\to\infty} F_{X_n} = F_{X_\infty}.
 \]
 \end{definicion}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 Otras definiciones son:
 \begin{definicion}[30]
 $(X_n)_{n=1}^\infty$ converge c.s.\ hacia $X_\infty$ en sentido completo si
@@ -842,7 +842,7 @@ $(X_n)_{n=1}^\infty$ converge c.s.\ hacia $X_\infty$ en sentido completo si
 Su interés radica en que es una condición sencilla de comprobar y si se cumple implica convergencia c.s.
 \end{definicion}}
 
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{definicion}[31]
 $(X_n)_{n=1}^\infty$ converge hacia $X_\infty$ en media si lo hacen sus esperanzas:
 \[
@@ -1141,7 +1141,7 @@ En las condiciones anteriores supongamos que $T : \R \to \R$ es estrictamente mo
   f_Y(y) = \sum_{j} \left|\frac{\partial h_j}{\partial y}(y)\right| \cdot f(x_j), \quad x_j \in T^{-1}(y)
 \end{equation*}
 \end{proposicion}}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[25]
 Supongamos que $X \sim \mathcal{N}(\mu, \sigma^2)$ y que $Y = aX + b$, $a, b \in \R$. Entonces:
 \begin{enumerate}
@@ -1247,7 +1247,7 @@ Luego $Y_1 \equiv T(X_1, X_2)$ tiene densidad:
 \]
 que es el enunciado renombrando argumentos $y_1 \to z$, $y_2 \to x_2$.
 \end{proof}
-\textcolor{blue}{
+\textcolor{azulresalt}{
 \begin{proposicion}[29 — \underline{Suma de variables}]
 Sean $X, Y$ v.a.s con densidad conjunta $f_{X,Y}(x,y)$. Entonces $Z = X + Y$ tiene densidad:
 \begin{enumerate}
